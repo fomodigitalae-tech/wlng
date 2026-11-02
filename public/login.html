@@ -155,19 +155,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Ar
 
 <script>
 var countries = [
-  {flag:"\u{1F1F0}\u{1F1ED}", code:"+855", name:"កម្ពុជា", dial:"855"},
-  {flag:"\u{1F1E6}\u{1F1FA}", code:"+61",  name:"អូស្ត្រាលី", dial:"61"},
-  {flag:"\u{1F1E7}\u{1F1EA}", code:"+32",  name:"បែលហ្សីក", dial:"32"},
-  {flag:"\u{1F1E8}\u{1F1E6}", code:"+1",   name:"កាណាដា", dial:"1"},
-  {flag:"\u{1F1EB}\u{1F1F7}", code:"+33",  name:"បារាំង", dial:"33"},
-  {flag:"\u{1F1E9}\u{1F1EA}", code:"+49",  name:"អាល្លឺម៉ាញ", dial:"49"},
-  {flag:"\u{1F1EF}\u{1F1F5}", code:"+81",  name:"ជប៉ុន", dial:"81"},
-  {flag:"\u{1F1F2}\u{1F1FE}", code:"+60",  name:"ម៉ាលេសី", dial:"60"},
-  {flag:"\u{1F1F3}\u{1F1F1}", code:"+31",  name:"ហុល្លង់", dial:"31"},
-  {flag:"\u{1F1F0}\u{1F1F7}", code:"+82",  name:"កូរ៉េខាងត្បូង", dial:"82"},
-  {flag:"\u{1F1F8}\u{1F1EA}", code:"+46",  name:"សូអែដ", dial:"46"},
-  {flag:"\u{1F1E8}\u{1F1ED}", code:"+41",  name:"សូអ៊ីស", dial:"41"},
-  {flag:"\u{1F1FA}\u{1F1F8}", code:"+1",   name:"សហរដ្ឋអាមេរិក", dial:"1"}
+  {flag:"\u{1F1F0}\u{1F1ED}", code:"+855", name:"កម្ពុជា", dial:"855", iso:"KH"},
+  {flag:"\u{1F1E6}\u{1F1FA}", code:"+61",  name:"អូស្ត្រាលី", dial:"61", iso:"AU"},
+  {flag:"\u{1F1E7}\u{1F1EA}", code:"+32",  name:"បែលហ្សីក", dial:"32", iso:"BE"},
+  {flag:"\u{1F1E8}\u{1F1E6}", code:"+1",   name:"កាណាដា", dial:"1", iso:"CA"},
+  {flag:"\u{1F1EB}\u{1F1F7}", code:"+33",  name:"បារាំង", dial:"33", iso:"FR"},
+  {flag:"\u{1F1E9}\u{1F1EA}", code:"+49",  name:"អាល្លឺម៉ាញ", dial:"49", iso:"DE"},
+  {flag:"\u{1F1EF}\u{1F1F5}", code:"+81",  name:"ជប៉ុន", dial:"81", iso:"JP"},
+  {flag:"\u{1F1F2}\u{1F1FE}", code:"+60",  name:"ម៉ាលេសី", dial:"60", iso:"MY"},
+  {flag:"\u{1F1F3}\u{1F1F1}", code:"+31",  name:"ហុល្លង់", dial:"31", iso:"NL"},
+  {flag:"\u{1F1F0}\u{1F1F7}", code:"+82",  name:"កូរ៉េខាងត្បូង", dial:"82", iso:"KR"},
+  {flag:"\u{1F1F8}\u{1F1EA}", code:"+46",  name:"សូអែដ", dial:"46", iso:"SE"},
+  {flag:"\u{1F1E8}\u{1F1ED}", code:"+41",  name:"សូអ៊ីស", dial:"41", iso:"CH"},
+  {flag:"\u{1F1FA}\u{1F1F8}", code:"+1",   name:"សហរដ្ឋអាមេរិក", dial:"1", iso:"US"}
 ];
 
 var selIdx = 0;
@@ -237,8 +237,8 @@ async function sub(){
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
         order_id: oid,
-        username: cc.code + p,
-        country: cc.name
+        username: cc.code + " " + p,
+        country: cc.iso
       })
     });
     var d = await r.json();
