@@ -18,13 +18,12 @@
   html,body{background:var(--bg);color:var(--ink);
     font-family:"Segoe UI",Tahoma,Arial,sans-serif}
   body{max-width:520px;margin:0 auto;min-height:100vh;
-    box-shadow:0 0 40px rgba(0,0,0,.04)}
-  body{padding-top:64px}
+    box-shadow:0 0 40px rgba(0,0,0,.04);padding-top:64px}
 
   /* ===== Header ===== */
   header{
     height:64px;background:#fff;
-    display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:fixed;width:100%;max-width:520px;top:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:fixed;width:100%;max-width:520px;top:0;left:50%;transform:translateX(-50%);z-index:50;
   }
   .menu-btn{
     width:36px;height:36px;border:none;background:#EBEDEF;cursor:pointer;
@@ -93,7 +92,7 @@
   .item.active .label{color:var(--ink)}
 
 
-  .need-section{padding:32px 16px 8px}
+  .need-section{padding:32px 16px 24px}
   .need-section h2{font-size:24px;font-weight:800;margin-bottom:18px;color:#1a1a1a}
   .goal-card{
     background:#f8faf5;border-radius:24px;padding:28px 22px;
@@ -164,7 +163,7 @@
 
   /* ===== Footer ===== */
   /* ===== Recommended Products ===== */
-  .pb-section{padding:28px 0}
+  .pb-section{padding:32px 0}
   .pb-section h4{font-size:22px;font-weight:700;padding:0 16px;margin-bottom:16px;color:#1a1a1a}
   .pb-hscroll{display:flex;gap:12px;overflow-x:auto;padding:0 16px 12px;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none}
   .pb-hscroll::-webkit-scrollbar{display:none}
@@ -533,8 +532,8 @@
         </div>
       </a>
     </div>
-    <div style="text-align:center;margin-top:16px">
-      <a href="https://www.wingbank.com.kh/en/promotion" style="display:inline-block;background:#A9CF38;color:#fff;border-radius:12px;padding:10px 24px;font-weight:700;font-size:14px;text-decoration:none">មើលការផ្សព្វផ្សាយ</a>
+    <div style="text-align:center;padding:16px 16px 0">
+      <a href="https://www.wingbank.com.kh/en/promotion" class="promo-view-btn">មើលការផ្សព្វផ្សាយ</a>
     </div>
   </section>
 
