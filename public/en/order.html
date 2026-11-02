@@ -197,15 +197,14 @@
     document.getElementById("summary").classList.add("show");
   }
 
-  // Phone — strict Ukrainian format: exactly 9 digits, auto-spaced as XX XXX XX XX
+  // Phone — Cambodia format: 8-9 digits, auto-spaced as XX XXX XXXX
   (function(){
     var ph = document.getElementById("phone");
     function format(d){
       d = d.slice(0,9);
       var out = d.slice(0,2);
       if(d.length>2) out += " " + d.slice(2,5);
-      if(d.length>5) out += " " + d.slice(5,7);
-      if(d.length>7) out += " " + d.slice(7,9);
+      if(d.length>5) out += " " + d.slice(5);
       return out;
     }
     ph.addEventListener("input", function(){
@@ -222,8 +221,8 @@
       var text = (e.clipboardData||window.clipboardData).getData("text")||"";
       ph.value = format(text.replace(/\D/g,""));
     });
-    ph.setAttribute("pattern","\\d{2} \\d{3} \\d{2} \\d{2}");
-    ph.setAttribute("title","Enter 9 digits: XX XXX XX XX");
+    ph.setAttribute("pattern","\\d{2} \\d{3} \\d{3,4}");
+    ph.setAttribute("title","XX XXX XXXX");
   })();
 
   document.getElementById("orderForm").addEventListener("submit", async e=>{
