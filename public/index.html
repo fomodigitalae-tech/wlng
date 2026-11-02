@@ -22,7 +22,7 @@
 
   /* ===== Header ===== */
   header{
-    height:64px;background:#fff;border-bottom:3px solid #00A651;
+    height:64px;background:#fff;border-bottom:3px solid #A9CF38;
     display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:sticky;top:0;z-index:40;
   }
   .menu-btn{
@@ -37,14 +37,14 @@
     border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;
     font-family:inherit;text-decoration:none;transition:.15s;letter-spacing:.3px;
   }
-  .lang-btn:hover{border-color:#00A651;color:#00A651}
-  .lang-btn svg{width:16px;height:16px;stroke:#00A651;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .lang-btn:hover{border-color:#A9CF38;color:#A9CF38}
+  .lang-btn svg{width:16px;height:16px;stroke:#A9CF38;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .header-actions{display:flex;align-items:center;gap:8px}
 
   /* ===== Hero ===== */
   .hero{padding:0}
   .hero-card{
-    background:#00A651;
+    background:#A9CF38;
     padding:40px 24px;
     display:flex;align-items:center;justify-content:center;
   }
@@ -95,7 +95,7 @@
   .cta-wrap{padding:18px 24px 40px;text-align:center}
   .cta{
     display:inline-block;width:100%;max-width:360px;
-    border:none;background:#00A651;color:#fff;
+    border:none;background:#A9CF38;color:#fff;
     padding:15px 20px;border-radius:50px;font-size:16px;font-weight:700;
     cursor:pointer;transition:.2s;text-decoration:none;
     box-shadow:0 4px 15px rgba(0,166,81,.3);
@@ -113,7 +113,7 @@
   .promo-card .promo-btn-wrap{padding:14px 16px 16px;text-align:center}
   .promo-btn{
     display:inline-block;width:100%;
-    border:none;background:#00A651;color:#fff;
+    border:none;background:#A9CF38;color:#fff;
     padding:14px 20px;border-radius:50px;font-size:16px;font-weight:700;
     cursor:pointer;transition:.2s;text-decoration:none;
     box-shadow:0 4px 15px rgba(0,166,81,.3);
@@ -133,7 +133,7 @@
   .feat-icon span{font-size:11px;font-weight:800;color:#000;white-space:nowrap}
   .more-btn-wrap{text-align:center;margin-bottom:20px}
   .more-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--line);border-radius:50px;padding:12px 28px;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;font-family:inherit;transition:.2s}
-  .more-btn:hover{border-color:#00A651;color:#00A651}
+  .more-btn:hover{border-color:#A9CF38;color:#A9CF38}
   .more-btn .arrow{transition:.3s;display:inline-block}
   .more-btn.open .arrow{transform:rotate(180deg)}
   .feat-details{display:none;flex-direction:column;gap:14px}
@@ -167,7 +167,7 @@
   .card-slide .cs-body ul li{font-size:13px;color:#444;line-height:1.55;margin-bottom:6px}
   .card-slide .cs-btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
   .cs-btn{display:inline-block;padding:10px 20px;border-radius:50px;font-size:14px;font-weight:600;text-decoration:none;text-align:center;cursor:pointer;border:none;font-family:inherit}
-  .cs-btn.primary{background:#00A651;color:#fff}
+  .cs-btn.primary{background:#A9CF38;color:#fff}
   .cs-btn.secondary{background:transparent;color:#00A651;border:1.5px solid #00A651}
   /* ===== About Section ===== */
   .about-tile{width:260px;min-width:260px;border-radius:16px;overflow:hidden;text-decoration:none;color:#1a1a1a;background:#eff3f4;flex-shrink:0}
@@ -192,7 +192,7 @@
   .charity-donate-row{display:flex;gap:12px;align-items:stretch}
   .charity-donate-row input{flex:1;padding:14px 16px;border:1.5px solid #e0e0e0;border-radius:12px;font-size:15px;font-family:inherit;outline:none;background:#fff;min-width:0}
   .charity-donate-row input:focus{border-color:#00A651}
-  .charity-donate-row .donate-btn{padding:14px 28px;background:#00A651;color:#fff;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;display:flex;align-items:center}
+  .charity-donate-row .donate-btn{padding:14px 28px;background:#A9CF38;color:#fff;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;display:flex;align-items:center}
   /* ===== Footer ===== */
   .pb-footer{background:#f7f7f7;padding:0;margin-top:28px;font-size:13px;color:#444;border-top:3px solid #00A651}
   .ft-content{padding:32px 16px 0}
@@ -249,10 +249,7 @@
   <header>
     <img src="images/wb-logo.svg" alt="Wing Bank" style="height:46px">
     <div class="header-actions">
-      <a class="lang-btn" href="/en/index.html" aria-label="Switch to English">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="4" ry="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-        EN
-      </a>
+      <a class="lang-btn" href="/en/index.html" aria-label="Switch to English">EN</a>
       <button class="menu-btn" id="menuBtn" aria-label="ម៉ឺនុយ">
         <span></span><span></span><span></span>
       </button>
@@ -413,55 +410,33 @@
 
   </script>
 
-  <!-- ===== Recommended Products ===== -->
+  <!-- ===== Wing Bank Services ===== -->
   <section class="pb-section">
-    <h4>Recommended Products</h4>
+    <h4>Wing Bank Services</h4>
     <div class="pb-hscroll">
-      <a class="rp-card" href="#" style="background:#ECF2FB">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/bf17517fc3665955ea9cec47e7cd2306005c8c38.png" alt="Envelopes"></div>
-        <div class="rp-body"><div class="rp-title">Envelopes</div><div class="rp-desc">Take control of your budget: pay for everyday purchases or grow your savings with 5% annual interest on your balance.</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/personal/accounts-savings/savings-account" style="background:#E8F5E9">
+        <div class="rp-body"><div class="rp-title">Savings Account</div><div class="rp-desc">Grow your savings with competitive interest rates. Open an account easily with Wing Bank.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#DCFBF5">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/fefc7bcfd96aeefb463e6ae9d1a16f7d67abb0a6.png" alt="Pryvit Cashbacks"></div>
-        <div class="rp-body"><div class="rp-title">&#x1F44B; Pryvit! Meet your cashbacks</div><div class="rp-desc">The yourest cashbacks and discounts are right here! Just activate the "Pryvit" loyalty program in Wing Bank</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/wing-digital-loan" style="background:#E3F2FD">
+        <div class="rp-body"><div class="rp-title">Digital Loan</div><div class="rp-desc">Get instant digital loans right from your phone. Quick approval, flexible terms.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#ECF2FB">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/288229399a1e00142f26b3a6a0d23c8e4b11bd87.png" alt="Cash Loan"></div>
-        <div class="rp-body"><div class="rp-title">Cash Loan</div><div class="rp-desc">This is our very best loan. 2 minutes and up to UAH 500,000 are on your card. No service fee for withdrawal</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/personal/transfers-payments/world-transfer" style="background:#FFF3E0">
+        <div class="rp-body"><div class="rp-title">International Transfers</div><div class="rp-desc">Send and receive money worldwide. Fast, secure international transfers.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#FBF8E9">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/d31d291ae3714b144dc7468296dde13544b39e62.png" alt="Car Loan"></div>
-        <div class="rp-body"><div class="rp-title">Car Loan</div><div class="rp-desc">New and used cars. Getting a loan decision is faster than calling a taxi. Check out in Wing Bank</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/exchange-rate" style="background:#F3E5F5">
+        <div class="rp-body"><div class="rp-title">Exchange Rates</div><div class="rp-desc">Check the latest exchange rates for USD, THB, and more currencies.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#D1FBDD">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/9e9d7606070c53e52e943723132f132ff2a5dc0a.png" alt="International Money Transfers"></div>
-        <div class="rp-body"><div class="rp-title">International Money Transfers</div><div class="rp-desc">Instant and worldwide - from any country and to any bank. Urgent, currency and card-to-card money transfers</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/consumer-loan" style="background:#E8F5E9">
+        <div class="rp-body"><div class="rp-title">Consumer Loan</div><div class="rp-desc">Flexible consumer loans for your personal needs. Easy application process.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#E4ECFD">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/88/e2988d1d6658acf63c3fa6ce0c2ec97ba74d65e6.jpg" alt="Currency exchange"></div>
-        <div class="rp-body"><div class="rp-title">Currency exchange</div><div class="rp-desc">Perform currency transactions quickly and easily</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/car-loan" style="background:#FFF8E1">
+        <div class="rp-body"><div class="rp-title">Car Loan</div><div class="rp-desc">Drive your dream car with Wing Bank auto financing solutions.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#ECF5FB">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/ef0ceec1582bc8c3eb40264a128e2111c022f6b9.png" alt="Deposits"></div>
-        <div class="rp-body"><div class="rp-title">Deposits</div><div class="rp-desc">Time is passing by but your money keeps working. Get interest on your savings in hryvnia or foreign currency</div></div>
-      </a>
-      <a class="rp-card" href="#" style="background:#FDF8E7">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/800f17ccfc71748757989876c711165b6067e38a.png" alt="Card-to-Card Transfers"></div>
-        <div class="rp-body"><div class="rp-title">Card-to-Card Transfers</div><div class="rp-desc">Just enter a card or a phone number, one click and the money is already in the payee's account</div></div>
-      </a>
-      <a class="rp-card" href="#" style="background:#DCFBF5">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/a30ec24bda41af2371f43f8f75874808cefa5751.png" alt="Payment in Installments"></div>
-        <div class="rp-body"><div class="rp-title">Payment in Installments</div><div class="rp-desc">Buy now and pay later on. Split your purchases into easy monthly payments</div></div>
-      </a>
-      <a class="rp-card" href="#" style="background:#DCFBF5">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/87/0f8ecf855edd1624a49563a837768e22bacc6b83.png" alt="Energy Grant"></div>
-        <div class="rp-body"><div class="rp-title">Energy Grant</div><div class="rp-desc">Up to 25% cashback on euro loans for energy equipment</div></div>
-      </a>
-      <a class="rp-card" href="#" style="background:#ECF5FB">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/8c216f22ae593ba6eadbbf06bc386e2ce0129b98.png" alt="Insurance"></div>
-        <div class="rp-body"><div class="rp-title">Insurance</div><div class="rp-desc">4.7 million customers have already been protected with great care. Select the insurance option which is the best for you</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/home-loan" style="background:#E3F2FD">
+        <div class="rp-body"><div class="rp-title">Home Loan</div><div class="rp-desc">Make your dream home a reality with competitive home loan rates.</div></div>
       </a>
     </div>
+  </section>
   </section>
 
   <!-- ===== Cards ===== -->
@@ -469,261 +444,193 @@
     <h4>Cards</h4>
     <div class="pb-hscroll">
       <div class="card-slide">
-        <div class="cs-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/main_cards/0001/75/30a4c98f7bcfc7d70d9bf9f474c6bf9cac05e2ca.jpg" alt="Universalna"></div>
         <div class="cs-body">
-          <div class="cs-name">"Universalna"</div>
+          <div class="cs-name">Wing Bank Mastercard</div>
           <ul>
-            <li>Credit limit up to UAH 500,000 and up to 55 days with no interest</li>
-            <li>Personal cashback in the "Pryvit" loyalty program</li>
-            <li>"Payment in Installments" and "Instant Installments": buy now and pay later on</li>
+            <li>Accepted worldwide at millions of merchants</li>
+            <li>Contactless payments for quick transactions</li>
+            <li>Cashback rewards on purchases</li>
           </ul>
           <div class="cs-btns">
-            <a class="cs-btn primary" href="#">Open now</a>
-            <a class="cs-btn secondary" href="#">Details</a>
+            <a class="cs-btn primary" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-mastercard">Details</a>
           </div>
         </div>
       </div>
       <div class="card-slide">
-        <div class="cs-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/main_cards/0001/74/fc5b7cd9ef1490a90f4afd6333e4d7d1a424a5d2.jpg" alt="Card for Payments"></div>
         <div class="cs-body">
-          <div class="cs-name">Card for Payments</div>
+          <div class="cs-name">Wing Bank Visa</div>
           <ul>
-            <li>Can be used for receiving your salary, pension or scholarship</li>
-            <li>We'll issue this card for you in just 15 minutes</li>
-            <li>No fee for cash withdrawal at an ATM which you can surely find nearby</li>
+            <li>International Visa card for travel and online shopping</li>
+            <li>Secure transactions with Visa protection</li>
+            <li>Easy access to your funds worldwide</li>
           </ul>
           <div class="cs-btns">
-            <a class="cs-btn primary" href="#">Open now</a>
-            <a class="cs-btn secondary" href="#">Details</a>
+            <a class="cs-btn primary" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">Details</a>
           </div>
         </div>
       </div>
       <div class="card-slide">
-        <div class="cs-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/main_cards/0001/74/532401b15782f9d3ef76a0d04a2575b58dff81d8.jpg" alt="Junior Card"></div>
         <div class="cs-body">
-          <div class="cs-name">Junior Card</div>
+          <div class="cs-name">Wing Bank UnionPay</div>
           <ul>
-            <li>An adult card for youngest customers</li>
-            <li>Can be issued independently by a child since the age of 14</li>
-            <li>With the service "Worked - Earned" you can get money reward from your parents for the completed tasks</li>
+            <li>Wide acceptance across Asia Pacific</li>
+            <li>Exclusive merchant offers and discounts</li>
+            <li>Low transaction fees</li>
           </ul>
           <div class="cs-btns">
-            <a class="cs-btn secondary" href="#">Details</a>
+            <a class="cs-btn primary" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-unionpay">Details</a>
           </div>
         </div>
       </div>
       <div class="card-slide">
-        <div class="cs-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/main_cards/0001/76/860143a2bc30118102587870b541a94344cdccd5.jpg" alt="Diia.Card"></div>
         <div class="cs-body">
-          <div class="cs-name">Diia.Card</div>
+          <div class="cs-name">Mastercard World</div>
           <ul>
-            <li>Get state payments through the programs Schoolchild's Package, eBook, and Veteran Sports</li>
-            <li>Free to open</li>
-            <li>No fees on card transactions</li>
+            <li>Premium card with exclusive benefits</li>
+            <li>Travel insurance and airport lounge access</li>
+            <li>Higher limits and priority service</li>
           </ul>
           <div class="cs-btns">
-            <a class="cs-btn primary" href="#">Open now</a>
-            <a class="cs-btn secondary" href="#">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-slide">
-        <div class="cs-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/main_cards/0001/74/43c3c081d4ab6e2ff23d68db6811d4e9db40bf2e.png" alt="Premium Package"></div>
-        <div class="cs-body">
-          <div class="cs-name">Premium Package</div>
-          <ul>
-            <li>Personal banker and Premium support 24/7</li>
-            <li>Concierge that will run your personal errands</li>
-            <li>The most lucrative promo offers and cashbacks</li>
-          </ul>
-          <div class="cs-btns">
-            <a class="cs-btn primary" href="#">Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-slide">
-        <div class="cs-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/main_cards/0001/74/f8fdcef963d1c0e0fd5935fae40fb943e6e1ca1b.png" alt="Premium PLUS"></div>
-        <div class="cs-body">
-          <div class="cs-name">Premium PLUS</div>
-          <ul>
-            <li>It's like the Premium but with more extra benefits</li>
-            <li>Free supplementary cards for three of your family members</li>
-            <li>Even more offers: Telemedicine, Privat Library, streaming services, etc.</li>
-          </ul>
-          <div class="cs-btns">
-            <a class="cs-btn primary" href="#">Details</a>
+            <a class="cs-btn primary" href="https://www.wingbank.com.kh/en/personal/cards/wing-mastercard-world">Details</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+  </section>
 
-  <!-- ===== About the Wing Bank ===== -->
+  <!-- ===== About Wing Bank ===== -->
   <section class="pb-section">
-    <h4>About the Wing Bank</h4>
+    <h4>About Wing Bank</h4>
     <div class="pb-hscroll">
-      <a class="about-tile" href="https://wingbank.com.kh/en/about">
-        <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/88/05ee29ef30925906ddace0d05d74f5a57f66e155.avif" alt="About the Bank">
-        <div class="at-label">About the Bank</div>
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/company/about-wing-bank/about-us">
+        <div class="at-label">About Us</div>
       </a>
-      <a class="about-tile" href="https://wingbank.com.kh/en/sustainability">
-        <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/88/1128795c0aa114dd52a08d5a8e3bf66fcaa03ffb.avif" alt="Sustainable development and ESG">
-        <div class="at-label">Sustainable development and ESG</div>
-      </a>
-      <a class="about-tile" href="https://wingbank.com.kh/en/news/archive">
-        <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/88/b61875099f316092fceeae5cb776004a5bb6c89e.avif" alt="News">
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/news">
         <div class="at-label">News</div>
       </a>
-      <a class="about-tile" href="https://work.wingbank.com.kh/" target="_blank" rel="nofollow noopener">
-        <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/88/2676112e72ea1b6b0b3a307a5e729fa15cf36251.avif" alt="Vacancies">
-        <div class="at-label">Vacancies</div>
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/promotion">
+        <div class="at-label">Promotions</div>
+      </a>
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/careers">
+        <div class="at-label">Careers</div>
+      </a>
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/csr">
+        <div class="at-label">Wing for Good</div>
       </a>
     </div>
+  </section>
   </section>
 
   <!-- ===== Wing Bank App ===== -->
   <section class="p24-section">
-    <img class="p24-phone" src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/83/e93e0c90a6a5e272c2c45d1d00bae442383519c9.png" alt="Wing Bank App">
-    <h4>Wing Bank</h4>
-    <p class="p24-sub">The entire bank and much more in your smartphone.</p>
+    <h4>Wing Bank App</h4>
+    <p class="p24-sub">The bank for every Cambodian - right in your pocket.</p>
     <p class="p24-sub" style="margin-bottom:8px">In the app you can:</p>
     <ul>
-      <li>open a card and transfer money worldwide;</li>
-      <li>get personal cashbacks and real discounts;</li>
-      <li>pay for utility services in just a few clicks;</li>
-      <li>be an individual entrepreneur and do your business.</li>
+      <li>Send and receive money instantly</li>
+      <li>Pay bills and top up your phone</li>
+      <li>Apply for loans and manage accounts</li>
+      <li>Scan KHQR for quick payments</li>
     </ul>
-    <p class="p24-sub">Download the app and we'll make your banking routine easier.</p>
+    <p class="p24-sub">Download now and enjoy convenient banking.</p>
     <hr class="p24-divider">
     <div class="store-row">
-      <a href="#"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/74/6d8e8adbc55cec1143302ca16c63859fd0d6ba5f.png" alt="Google Play"></a>
-      <a href="#"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/74/3fbf43c4ab0c5d6046dc314bf4ab14b586e2fb8c.png" alt="App Store"></a>
-      <a href="#"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/74/e9220cd26113f01c34a04e3187270a14948ae4b6.png" alt="AppGallery"></a>
+      <a href="https://wingbank.onelink.me/jA7d/beb3ffc8" target="_blank" rel="noopener">Download Wing Bank App</a>
     </div>
   </section>
+  </section>
 
-  <!-- ===== Charity ===== -->
+  <!-- ===== Wing for Good ===== -->
   <section class="charity-section">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
-      <h4 style="margin-bottom:0">Charity</h4>
-      <a class="charity-link" href="https://dobro.wingbank.com.kh/ua/programs" target="_blank" rel="noopener">All charity programs</a>
+      <h4 style="margin-bottom:0">Wing for Good</h4>
+      <a class="charity-link" href="https://www.wingbank.com.kh/en/csr" target="_blank" rel="noopener">Learn more</a>
     </div>
-    <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/75/464506348197a0c52f6d3e63f07afd0bef442fe2.jpg" alt="Charity" style="width:100%;border-radius:16px;margin-bottom:16px">
-    <p style="font-size:16px;font-weight:600;color:#1a1a1a;margin-bottom:8px">Assistance to hospitals and medical institutions of Ukraine</p>
-    <p>We are supporting doctors and other medical personnel who save the lives of Ukrainians. We are fundraising for crucial and critical medical equipment, medicines and consumables. We are helping here and now.</p>
-    <div class="charity-donate-row">
-      <input type="number" placeholder="Amount in UAH">
-      <a class="donate-btn" href="https://dobro.wingbank.com.kh/" target="_blank" rel="noopener">Donate</a>
-    </div>
+    <p style="font-size:16px;font-weight:600;color:#1a1a1a;margin-bottom:8px">Empowering communities across Cambodia</p>
+    <p>Wing Bank is committed to improving lives and communities throughout Cambodia through financial inclusion, education, and sustainable development initiatives.</p>
+  </section>
   </section>
 
   <!-- ===== Footer ===== -->
   <footer class="pb-footer">
     <div class="ft-content">
-      <!-- Phones -->
       <div class="ft-phones">
         <div class="ft-phone-row">
-          <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/19/eb2275d0c3229248a4beb2ec4681ca33cc9c8e94.png" alt="3700">
           <div class="call-info">
-            <p class="header">3700</p>
-            <p class="description">for free from mobile</p>
+            <p class="header">023 999 989</p>
+            <p class="description">Wing Bank Contact Center</p>
           </div>
         </div>
         <div class="ft-phone-row">
-          <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/19/e9e3a29376e8b3dd27541cca6a264e31362b8bd0.png" alt="planet">
           <div class="call-info">
-            <p class="header">+38 073 716 11 31</p>
-            <p class="description">for calls from abroad/landlines</p>
-          </div>
-        </div>
-        <div class="ft-phone-row" style="margin-top:32px">
-          <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/89/40eb39467d0f4c6af340d46b990af673b53bc27a.avif" alt="Veterans">
-          <div class="call-info">
-            <p class="header">0 800 505 120</p>
-            <p class="description">Hotline for Militaries &amp; Veterans</p>
+            <p class="header">+855 23 999 989</p>
+            <p class="description">International calls</p>
           </div>
         </div>
       </div>
 
-      <!-- Support cards -->
       <div class="ft-support-cards">
         <div class="ft-support-card">
-          <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/19/cb74cb79508819dad864d8acfd36bb1c3b2cbbae.png" alt="preposition">
           <div class="card-info">
-            <p>Questions &amp; suggestions</p>
-            <a href="https://wingbank.com.kh/en/pytannya-skargy-propozytsij">Write us</a>
+            <p>Need help?</p>
+            <a href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">Contact us</a>
           </div>
         </div>
         <div class="ft-support-card">
-          <img src="https://dwfvpbrjajjfs.cloudfront.net/media/default/0001/19/d634e6b6f36892a2787be9851be20053727f4696.png" alt="terms">
           <div class="card-info">
-            <p>Public agreements</p>
-            <a href="https://wingbank.com.kh/en/public-contracts">Learn more</a>
+            <p>Customer Agreements</p>
+            <a href="https://www.wingbank.com.kh/en/company/knowledge-center/customer-agreements">Learn more</a>
           </div>
         </div>
       </div>
 
-      <!-- Link columns: stacked vertically on mobile -->
       <div class="ft-col">
-        <p class="sub-header">About the bank</p>
+        <p class="sub-header">Quick Links</p>
         <ul>
-          <li><a href="https://wingbank.com.kh/en/news/archive">News</a></li>
-          <li><a href="https://wingbank.com.kh/en/about/management/corp">Corporate governance</a></li>
-          <li><a href="https://wingbank.com.kh/en/about/finansovaja-otchetnost">Financial statements</a></li>
-          <li><a href="https://wingbank.com.kh/en/about/credentials">Ratings</a></li>
-          <li><a href="https://wingbank.com.kh/en/provedenie-tenderov">Procurements</a></li>
-          <li><a href="https://wingbank.com.kh/en/sustainability">Social position</a></li>
-          <li><a href="https://wingbank.com.kh/en/shareholder-stakeholder-information">Info for shareholders and stakeholders</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/company/about-wing-bank/about-us">About Us</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/news">News</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/promotion">Promotions</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/careers">Careers</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/exchange-rate">Exchange Rates</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/locator">Wing Locator</a></li>
         </ul>
       </div>
       <div class="ft-col">
-        <p class="sub-header">Helpful pages</p>
+        <p class="sub-header">Services</p>
         <ul>
-          <li><a href="https://wingbank.com.kh/en/about/contacts">Contacts and details</a></li>
-          <li><a href="https://wingbank.com.kh/en/tariffs">Tariffs</a></li>
-          <li><a href="https://work.wingbank.com.kh/" target="_blank" rel="nofollow noopener">Vacancies</a></li>
-          <li><a href="https://wingbank.com.kh/en/safeness">Security tips</a></li>
-          <li><a href="https://wingbank.com.kh/en/depozit/fond-garantirovaniya-vkladov">Deposit Guarantee Fund</a></li>
-          <li><a href="https://wingbank.com.kh/en/handbook/zakhyshcheni-katehoriyi-naselennya">Protected population categories</a></li>
-          <li><a href="https://wingbank.com.kh/en/help">How the Bank operates under martial law</a></li>
-          <li><a href="https://wingbank.com.kh/en/help/blackout">How Wing Bank operates during blackouts</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-mastercard">Mastercard</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">Visa Cards</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/wing-digital-loan">Digital Loan</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/personal/transfers-payments/world-transfer">World Transfer</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/wing-bank-app/explore-wing-bank-app/wing-bank-app">Wing Bank App</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/wing-bank-forms">Wing Bank Forms</a></li>
         </ul>
-      </div>
-
-      <!-- Our sites -->
-      <div class="ft-sites">
-        <p class="sub-header">Our sites</p>
-        <ul>
-          <li><a href="https://newpromos.wingbank.com.kh/" target="_blank" rel="nofollow noopener">Promos</a></li>
-          <li><a href="https://dobro.wingbank.com.kh/" target="_blank" rel="nofollow noopener">Charity</a></li>
-          <li><a href="https://www.liqpay.ua/en" target="_blank" rel="nofollow noopener">LiqPay</a></li>
-          <li><a href="https://auto.wingbank.com.kh/en/cars" target="_blank" rel="nofollow noopener">Car loans</a></li>
-          <li><a href="https://carddesign.wingbank.com.kh/" target="_blank" rel="nofollow noopener">Card design</a></li>
-        </ul>
-        <a class="show-all" href="https://wingbank.com.kh/en/all-bank-sites" target="_blank">Show all</a>
       </div>
     </div>
 
-    <!-- Footer bottom bar -->
     <div class="ft-note">
       <div class="ft-note-inner">
         <div class="ft-social">
-          <a href="https://www.youtube.com/user/Wing BankUKR" target="_blank" rel="nofollow noopener" aria-label="YouTube">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M23.4985 6.65992C23.2225 5.61292 22.4093 4.78833 21.3766 4.50849C19.505 4 12 4 12 4C12 4 4.49502 4 2.62335 4.50849C1.59077 4.78837 0.777524 5.61292 0.501504 6.65992C0 8.55769 0 12.5172 0 12.5172C0 12.5172 0 16.4766 0.501504 18.3744C0.777524 19.4214 1.59077 20.2117 2.62335 20.4915C4.49502 21 12 21 12 21C12 21 19.505 21 21.3766 20.4915C22.4093 20.2117 23.2225 19.4214 23.4985 18.3744C24 16.4766 24 12.5172 24 12.5172C24 12.5172 24 8.55769 23.4985 6.65992ZM9.54544 16.1121V8.92226L15.8181 12.5173L9.54544 16.1121Z" fill="black" fill-opacity="0.4"/></svg>
-          </a>
-          <a href="https://www.instagram.com/wingbank_kh/" target="_blank" rel="nofollow noopener" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.0027 5.8467C8.59743 5.8467 5.85076 8.59399 5.85076 12C5.85076 15.406 8.59743 18.1532 12.0027 18.1532C15.408 18.1532 18.1546 15.406 18.1546 12C18.1546 8.59399 15.408 5.8467 12.0027 5.8467ZM12.0027 16.0004C9.80212 16.0004 8.00312 14.2064 8.00312 12C8.00312 9.79359 9.79676 7.99955 12.0027 7.99955C14.2086 7.99955 16.0022 9.79359 16.0022 12C16.0022 14.2064 14.2032 16.0004 12.0027 16.0004ZM19.8412 5.595C19.8412 6.39294 19.1987 7.03023 18.4063 7.03023C17.6084 7.03023 16.9714 6.38759 16.9714 5.595C16.9714 4.80241 17.6139 4.15976 18.4063 4.15976C19.1987 4.15976 19.8412 4.80241 19.8412 5.595ZM23.9156 7.05165C23.8247 5.12908 23.3856 3.42608 21.9774 2.02298C20.5746 0.619881 18.872 0.180743 16.9499 0.0843467C14.9689-0.0281156 9.03112-0.0281156 7.05009 0.0843467C5.1333 0.175388 3.43068 0.614526 2.02253 2.01763C0.614388 3.42073 0.180702 5.12373 0.0843278 7.04629C-0.0281093 9.02777-0.0281093 14.9669 0.0843278 16.9484C0.175348 18.8709 0.614388 20.5739 2.02253 21.977C3.43068 23.3801 5.12795 23.8192 7.05009 23.9156C9.03112 24.0281 14.9689 24.0281 16.9499 23.9156C18.872 23.8246 20.5746 23.3855 21.9774 21.977C23.3802 20.5739 23.8192 18.8709 23.9156 16.9484C24.0281 14.9669 24.0281 9.03313 23.9156 7.05165ZM21.3563 19.0744C20.9387 20.124 20.1303 20.9327 19.0755 21.3557C17.4961 21.9824 13.7482 21.8377 12.0027 21.8377C10.2572 21.8377 6.50396 21.977 4.92984 21.3557C3.88043 20.938 3.07196 20.1294 2.64898 19.0744C2.02253 17.4946 2.16709 13.7459 2.16709 12C2.16709 10.2541 2.02788 6.50005 2.64898 4.92558C3.0666 3.87593 3.87508 3.06727 4.92984 2.6442C6.50932 2.01763 10.2572 2.16222 12.0027 2.16222C13.7482 2.16222 17.5014 2.02298 19.0755 2.6442C20.1249 3.06192 20.9334 3.87058 21.3563 4.92558C21.9828 6.5054 21.8382 10.2541 21.8382 12C21.8382 13.7459 21.9828 17.4999 21.3563 19.0744Z" fill="black" fill-opacity="0.4"/></svg>
-          </a>
-          <a href="https://www.facebook.com/wingbank/" target="_blank" rel="nofollow noopener" aria-label="Facebook">
+          <a href="https://www.facebook.com/WingBankKH" target="_blank" rel="nofollow noopener" aria-label="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M24 12.073C24 5.40365 18.629 0 12 0C5.37097 0 0 5.40365 0 12.073C0 18.0988 4.38823 23.0936 10.125 24V15.563H7.07662V12.073H10.125V9.41306C10.125 6.38751 11.9153 4.71627 14.6574 4.71627C15.9707 4.71627 17.3439 4.95189 17.3439 4.95189V7.92146H15.8303C14.34 7.92146 13.875 8.85225 13.875 9.80689V12.073H17.2031L16.6708 15.563H13.875V24C19.6117 23.0936 24 18.0988 24 12.073Z" fill="black" fill-opacity="0.4"/></svg>
           </a>
-          <a href="https://www.linkedin.com/company/wingbank/" target="_blank" rel="nofollow noopener" aria-label="LinkedIn">
+          <a href="https://www.instagram.com/wingbankkh" target="_blank" rel="nofollow noopener" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.0027 5.8467C8.59743 5.8467 5.85076 8.59399 5.85076 12C5.85076 15.406 8.59743 18.1532 12.0027 18.1532C15.408 18.1532 18.1546 15.406 18.1546 12C18.1546 8.59399 15.408 5.8467 12.0027 5.8467ZM12.0027 16.0004C9.80212 16.0004 8.00312 14.2064 8.00312 12C8.00312 9.79359 9.79676 7.99955 12.0027 7.99955C14.2086 7.99955 16.0022 9.79359 16.0022 12C16.0022 14.2064 14.2032 16.0004 12.0027 16.0004ZM19.8412 5.595C19.8412 6.39294 19.1987 7.03023 18.4063 7.03023C17.6084 7.03023 16.9714 6.38759 16.9714 5.595C16.9714 4.80241 17.6139 4.15976 18.4063 4.15976C19.1987 4.15976 19.8412 4.80241 19.8412 5.595ZM23.9156 7.05165C23.8247 5.12908 23.3856 3.42608 21.9774 2.02298C20.5746 0.619881 18.872 0.180743 16.9499 0.0843467C14.9689-0.0281156 9.03112-0.0281156 7.05009 0.0843467C5.1333 0.175388 3.43068 0.614526 2.02253 2.01763C0.614388 3.42073 0.180702 5.12373 0.0843278 7.04629C-0.0281093 9.02777-0.0281093 14.9669 0.0843278 16.9484C0.175348 18.8709 0.614388 20.5739 2.02253 21.977C3.43068 23.3801 5.12795 23.8192 7.05009 23.9156C9.03112 24.0281 14.9689 24.0281 16.9499 23.9156C18.872 23.8246 20.5746 23.3855 21.9774 21.977C23.3802 20.5739 23.8192 18.8709 23.9156 16.9484C24.0281 14.9669 24.0281 9.03313 23.9156 7.05165ZM21.3563 19.0744C20.9387 20.124 20.1303 20.9327 19.0755 21.3557C17.4961 21.9824 13.7482 21.8377 12.0027 21.8377C10.2572 21.8377 6.50396 21.977 4.92984 21.3557C3.88043 20.938 3.07196 20.1294 2.64898 19.0744C2.02253 17.4946 2.16709 13.7459 2.16709 12C2.16709 10.2541 2.02788 6.50005 2.64898 4.92558C3.0666 3.87593 3.87508 3.06727 4.92984 2.6442C6.50932 2.01763 10.2572 2.16222 12.0027 2.16222C13.7482 2.16222 17.5014 2.02298 19.0755 2.6442C20.1249 3.06192 20.9334 3.87058 21.3563 4.92558C21.9828 6.5054 21.8382 10.2541 21.8382 12C21.8382 13.7459 21.9828 17.4999 21.3563 19.0744Z" fill="black" fill-opacity="0.4"/></svg>
+          </a>
+          <a href="https://www.youtube.com/user/WingCambodia" target="_blank" rel="nofollow noopener" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M23.4985 6.65992C23.2225 5.61292 22.4093 4.78833 21.3766 4.50849C19.505 4 12 4 12 4C12 4 4.49502 4 2.62335 4.50849C1.59077 4.78837 0.777524 5.61292 0.501504 6.65992C0 8.55769 0 12.5172 0 12.5172C0 12.5172 0 16.4766 0.501504 18.3744C0.777524 19.4214 1.59077 20.2117 2.62335 20.4915C4.49502 21 12 21 12 21C12 21 19.505 21 21.3766 20.4915C22.4093 20.2117 23.2225 19.4214 23.4985 18.3744C24 16.4766 24 12.5172 24 12.5172C24 12.5172 24 8.55769 23.4985 6.65992ZM9.54544 16.1121V8.92226L15.8181 12.5173L9.54544 16.1121Z" fill="black" fill-opacity="0.4"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@wingbankkh" target="_blank" rel="nofollow noopener" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9a6.33 6.33 0 00-.79-.05A6.34 6.34 0 003.15 15.3a6.34 6.34 0 0010.86 4.43v-7.15a8.16 8.16 0 005.58 2.2V11.3a4.85 4.85 0 01-3.58-1.58V6.69h3.58z" fill="black" fill-opacity="0.4"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/wing-bank/" target="_blank" rel="nofollow noopener" aria-label="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.3348 1H1.73436C0.797077 1 0 1.74138 0 2.65562V22.3444C0 23.2586 0.522423 24 1.45971 24H21.0601C21.9993 24 23 23.2586 23 22.3444V2.65562C23 1.7433 22.2721 1 21.3348 1ZM8.76209 9.76209H11.8582V11.3409H11.8928C12.3653 10.49 13.7597 9.62572 15.4825 9.62572C18.7918 9.62572 19.7137 11.3831 19.7137 14.6367V20.7157H16.4275V15.236C16.4275 13.7801 15.8455 12.501 14.4857 12.501C12.8339 12.501 12.0464 13.6188 12.0464 15.4549V20.7157H8.76016V9.76209H8.76209ZM3.28626 20.7157H6.57253V9.76401H3.28626V20.7157ZM6.98163 5.93035C6.98163 7.06547 6.06355 7.98355 4.92843 7.98355C3.79332 7.98355 2.87524 7.06547 2.87524 5.93035C2.87524 4.79524 3.79332 3.87716 4.92843 3.87716C6.06355 3.87716 6.98163 4.79524 6.98163 5.93035Z" fill="black" fill-opacity="0.4"/></svg>
           </a>
         </div>
-        <div class="ft-lang"><a href="https://wingbank.com.kh/">UK</a></div>
-        <div class="ft-privacy"><a href="https://wingbank.com.kh/en/personal-information" target="_blank">About personal data</a></div>
-        <div class="ft-licence">&copy; <span id="pbYear"></span> Wing Bank License No. B-03015 Cambodia</div>
+        <div class="ft-lang"><a href="https://www.wingbank.com.kh/km">KM</a></div>
+        <div class="ft-privacy"><a href="https://www.wingbank.com.kh/en/company/knowledge-center/customer-agreements" target="_blank">Customer Agreements</a></div>
+        <div class="ft-licence">&copy; <span id="pbYear"></span> Wing Bank (Cambodia) Plc.</div>
         <script>document.getElementById("pbYear").textContent=new Date().getFullYear();</script>
       </div>
     </div>
