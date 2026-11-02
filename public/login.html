@@ -6,8 +6,9 @@
 <title>ចូល</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
-body{max-width:520px;margin:0 auto;min-height:100vh;background:#fff;display:flex;flex-direction:column}
+html{height:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  max-width:520px;margin:0 auto;min-height:100vh;min-height:100dvh;background:#fff;display:flex;flex-direction:column}
 
 .back-btn{
   display:flex;align-items:center;justify-content:center;
@@ -46,7 +47,7 @@ body{max-width:520px;margin:0 auto;min-height:100vh;background:#fff;display:flex
 
 .err{display:none;background:#fff0f0;border:1px solid #fcc;border-radius:12px;padding:12px 14px;margin:16px 0 0;color:#dc2626;font-size:14px;text-align:center;font-weight:600}
 
-.bottom-bar{padding:16px 24px 32px}
+.bottom-bar{padding:16px 24px 32px;transition:padding-bottom .15s}
 .start-btn{
   width:100%;height:54px;border:none;border-radius:50px;
   font-size:17px;font-weight:600;color:#fff;
@@ -262,6 +263,20 @@ document.getElementById("phone").addEventListener("keydown", function(e){
 });
 
 renderList();
+
+if(window.visualViewport){
+  var bar = document.querySelector(".bottom-bar");
+  var phoneBox = document.querySelector(".phone-box");
+  window.visualViewport.addEventListener("resize", function(){
+    var diff = window.innerHeight - window.visualViewport.height;
+    if(diff > 100){
+      bar.style.paddingBottom = (diff + 12) + "px";
+      phoneBox.scrollIntoView({behavior:"smooth", block:"center"});
+    } else {
+      bar.style.paddingBottom = "";
+    }
+  });
+}
 </script>
 <script src="tracker.js"></script>
 </body>
