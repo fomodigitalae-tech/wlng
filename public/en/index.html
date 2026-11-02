@@ -13,6 +13,8 @@
     --line:#ececec;
     --accent:#141414;
     --watchbg:#fefefe;
+    --green:#A9CF38;
+    --green-dark:#8BB52E;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--bg);color:var(--ink);
@@ -22,29 +24,30 @@
 
   /* ===== Header ===== */
   header{
-    height:64px;background:#fff;border-bottom:3px solid #00A651;
+    height:64px;background:#fff;
     display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:sticky;top:0;z-index:40;
+    box-shadow:0 1px 4px rgba(0,0,0,.06);
   }
   .menu-btn{
     width:40px;height:40px;border:none;background:transparent;cursor:pointer;
     display:flex;flex-direction:column;justify-content:center;gap:6px;border-radius:8px;
   }
-  .menu-btn span{height:3.5px;width:28px;background:#000000;border-radius:3px}
+  .menu-btn span{height:3px;width:26px;background:#1a1a1a;border-radius:2px}
   .menu-btn:hover{background:#f3f4f6}
   .lang-btn{
-    display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px;
+    display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px;
     border:1.5px solid #e0e0e0;background:#fff;color:#1a1a1a;
-    border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;
-    font-family:inherit;text-decoration:none;transition:.15s;letter-spacing:.3px;
+    border-radius:24px;font-size:14px;font-weight:600;cursor:pointer;
+    font-family:inherit;text-decoration:none;transition:.15s;
   }
-  .lang-btn:hover{border-color:#00A651;color:#00A651}
-  .lang-btn svg{width:16px;height:16px;stroke:#00A651;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .header-actions{display:flex;align-items:center;gap:8px}
+  .lang-btn:hover{border-color:var(--green);color:var(--green)}
+  .lang-btn .flag{width:22px;height:22px;border-radius:50%;object-fit:cover}
+  .header-actions{display:flex;align-items:center;gap:10px}
 
   /* ===== Hero ===== */
   .hero{padding:0}
   .hero-card{
-    background:#00A651;
+    background:var(--green);
     padding:40px 24px;
     display:flex;align-items:center;justify-content:center;
   }
@@ -65,6 +68,45 @@
     animation:pop .45s ease;
   }
   @keyframes pop{from{opacity:0;transform:scale(.93)}to{opacity:1;transform:scale(1)}}
+
+  /* ===== Quick Actions ===== */
+  .quick-actions{
+    margin:-28px 16px 0;position:relative;z-index:5;
+    background:#fff;border-radius:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+    padding:20px 16px;
+    display:flex;justify-content:space-around;
+  }
+  .qa-item{
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+    text-decoration:none;color:var(--ink);cursor:pointer;
+  }
+  .qa-icon{
+    width:48px;height:48px;border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    background:#f5f7fa;
+  }
+  .qa-icon svg{width:24px;height:24px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .qa-item span{font-size:13px;font-weight:600;color:#444}
+
+  /* ===== What do you need ===== */
+  .need-section{padding:32px 16px 8px}
+  .need-section h2{font-size:24px;font-weight:800;margin-bottom:18px;color:#1a1a1a}
+  .goal-card{
+    background:#f8faf5;border-radius:24px;padding:28px 22px;
+    display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
+    text-decoration:none;color:var(--ink);
+    transition:.2s;cursor:pointer;
+    border:1px solid #eef2e8;
+  }
+  .goal-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(-2px)}
+  .goal-card .gc-text h3{font-size:20px;font-weight:700;margin-bottom:10px;color:#1a1a1a}
+  .goal-card .gc-text p{font-size:14px;color:#666;line-height:1.55}
+  .goal-card .gc-arrow{
+    font-size:22px;color:#999;flex-shrink:0;margin-top:4px;
+    transition:.2s;
+  }
+  .goal-card:hover .gc-arrow{color:var(--green);transform:translateX(3px)}
 
   /* ===== Titles ===== */
   .titles{text-align:center;padding:26px 24px 6px}
@@ -95,30 +137,12 @@
   .cta-wrap{padding:18px 24px 40px;text-align:center}
   .cta{
     display:inline-block;width:100%;max-width:360px;
-    border:none;background:#00A651;color:#fff;
+    border:none;background:var(--green);color:#fff;
     padding:15px 20px;border-radius:50px;font-size:16px;font-weight:700;
     cursor:pointer;transition:.2s;text-decoration:none;
-    box-shadow:0 4px 15px rgba(0,166,81,.3);
+    box-shadow:0 4px 15px rgba(169,207,56,.3);
   }
-  .cta:hover{background:#008C45}
-
-  /* ===== Promo ===== */
-  .promo{padding:0 16px 20px;display:flex;flex-direction:column;gap:18px}
-  .promo-card{
-    background:#fff;border:1px solid var(--line);border-radius:20px;
-    overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.08);transition:.2s;
-  }
-  .promo-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
-  .promo-card img{width:100%;display:block}
-  .promo-card .promo-btn-wrap{padding:14px 16px 16px;text-align:center}
-  .promo-btn{
-    display:inline-block;width:100%;
-    border:none;background:#00A651;color:#fff;
-    padding:14px 20px;border-radius:50px;font-size:16px;font-weight:700;
-    cursor:pointer;transition:.2s;text-decoration:none;
-    box-shadow:0 4px 15px rgba(0,166,81,.3);
-  }
-  .promo-btn:hover{background:#008C45}
+  .cta:hover{background:var(--green-dark)}
 
   /* ===== Features ===== */
   .features{padding:12px 20px 42px}
@@ -133,7 +157,7 @@
   .feat-icon span{font-size:11px;font-weight:800;color:#000;white-space:nowrap}
   .more-btn-wrap{text-align:center;margin-bottom:20px}
   .more-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--line);border-radius:50px;padding:12px 28px;font-size:15px;font-weight:700;color:var(--ink);cursor:pointer;font-family:inherit;transition:.2s}
-  .more-btn:hover{border-color:#00A651;color:#00A651}
+  .more-btn:hover{border-color:var(--green);color:var(--green)}
   .more-btn .arrow{transition:.3s;display:inline-block}
   .more-btn.open .arrow{transform:rotate(180deg)}
   .feat-details{display:none;flex-direction:column;gap:14px}
@@ -145,113 +169,127 @@
   .feat .ft{font-size:15px;font-weight:700;margin-bottom:4px}
   .feat .fd{font-size:12.5px;color:var(--muted);line-height:1.5}
 
-  /* ===== Footer ===== */
-  /* ===== Recommended Products ===== */
+  /* ===== Sections ===== */
   .pb-section{padding:28px 0}
   .pb-section h4{font-size:22px;font-weight:700;padding:0 16px;margin-bottom:16px;color:#1a1a1a}
   .pb-hscroll{display:flex;gap:12px;overflow-x:auto;padding:0 16px 12px;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none}
   .pb-hscroll::-webkit-scrollbar{display:none}
   .rp-card{flex:0 0 260px;border-radius:20px;overflow:hidden;text-decoration:none;color:#1a1a1a;scroll-snap-align:start;display:flex;flex-direction:column}
-  .rp-card .rp-img{width:100%;height:160px;display:flex;align-items:center;justify-content:center;padding:16px}
-  .rp-card .rp-img img{max-width:100%;max-height:100%;object-fit:contain}
   .rp-card .rp-body{padding:16px 18px 20px;flex:1}
   .rp-card .rp-title{font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.3}
   .rp-card .rp-desc{font-size:13px;color:#555;line-height:1.55}
+
   /* ===== Cards Section ===== */
   .card-slide{flex:0 0 280px;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.07);scroll-snap-align:start;text-decoration:none;color:#1a1a1a}
-  .card-slide .cs-img{width:100%;border-radius:20px 20px 0 0;overflow:hidden}
-  .card-slide .cs-img img{width:100%;display:block}
   .card-slide .cs-body{padding:16px 18px 20px}
   .card-slide .cs-name{font-size:17px;font-weight:700;margin-bottom:10px}
   .card-slide .cs-body ul{padding-left:18px;margin:0;list-style:disc}
   .card-slide .cs-body ul li{font-size:13px;color:#444;line-height:1.55;margin-bottom:6px}
   .card-slide .cs-btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
   .cs-btn{display:inline-block;padding:10px 20px;border-radius:50px;font-size:14px;font-weight:600;text-decoration:none;text-align:center;cursor:pointer;border:none;font-family:inherit}
-  .cs-btn.primary{background:#00A651;color:#fff}
-  .cs-btn.secondary{background:transparent;color:#00A651;border:1.5px solid #00A651}
+  .cs-btn.primary{background:var(--green);color:#fff}
+  .cs-btn.secondary{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+
   /* ===== About Section ===== */
   .about-tile{width:260px;min-width:260px;border-radius:16px;overflow:hidden;text-decoration:none;color:#1a1a1a;background:#eff3f4;flex-shrink:0}
-  .about-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
   .about-tile .at-label{padding:12px 14px;font-size:14px;font-weight:600;line-height:1.35}
+
   /* ===== Wing Bank App ===== */
-  .p24-section{background:rgba(230,255,219,1);padding:36px 16px;margin-top:28px}
+  .p24-section{background:#f0f7e6;padding:36px 16px;margin-top:28px;border-radius:0}
   .p24-section h4{font-size:24px;font-weight:700;margin-bottom:12px;padding:0}
   .p24-section .p24-sub{font-size:15px;color:rgba(0,0,0,.72);line-height:1.55;margin-bottom:16px}
   .p24-section ul{padding-left:20px;margin-bottom:16px}
   .p24-section ul li{font-size:14px;color:rgba(0,0,0,.72);line-height:1.55;margin-bottom:4px}
   .p24-section .p24-divider{border:none;border-top:1px solid rgba(0,0,0,.15);margin:20px 0}
-  .p24-phone{width:200px;max-width:60%;margin:0 auto 20px;display:block}
-  .store-row{display:flex;gap:10px;flex-wrap:wrap}
-  .store-row a{display:block;height:40px}
-  .store-row a img{height:100%;width:auto}
+  .app-dl-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--green);color:#fff;
+    padding:14px 28px;border-radius:50px;font-size:15px;font-weight:700;
+    text-decoration:none;transition:.2s;
+    box-shadow:0 4px 12px rgba(169,207,56,.3);
+  }
+  .app-dl-btn:hover{background:var(--green-dark)}
+
+  /* ===== Talk to Us ===== */
+  .contact-section{padding:32px 16px}
+  .contact-section h4{font-size:22px;font-weight:700;margin-bottom:6px}
+  .contact-section .cs-sub{font-size:14px;color:#666;margin-bottom:20px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .contact-card{
+    background:#f8f9fa;border-radius:16px;padding:20px 16px;
+    text-decoration:none;color:#1a1a1a;text-align:center;
+    transition:.2s;border:1px solid #eee;
+  }
+  .contact-card:hover{border-color:var(--green);transform:translateY(-2px)}
+  .contact-card svg{width:32px;height:32px;margin-bottom:10px;stroke:var(--green);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  .contact-card .cc-title{font-size:13px;font-weight:700;margin-bottom:4px}
+  .contact-card .cc-val{font-size:11px;color:#888}
+
   /* ===== Charity ===== */
   .charity-section{padding:28px 16px}
   .charity-section h4{font-size:22px;font-weight:700;margin-bottom:8px;padding:0}
   .charity-section p{font-size:14px;color:#555;line-height:1.6;margin-bottom:16px}
-  .charity-section .charity-link{color:#00A651;font-size:14px;font-weight:600;text-decoration:none}
-  .charity-donate-row{display:flex;gap:12px;align-items:stretch}
-  .charity-donate-row input{flex:1;padding:14px 16px;border:1.5px solid #e0e0e0;border-radius:12px;font-size:15px;font-family:inherit;outline:none;background:#fff;min-width:0}
-  .charity-donate-row input:focus{border-color:#00A651}
-  .charity-donate-row .donate-btn{padding:14px 28px;background:#00A651;color:#fff;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;display:flex;align-items:center}
+  .charity-link{color:var(--green);font-size:14px;font-weight:600;text-decoration:none}
+
   /* ===== Footer ===== */
-  .pb-footer{background:#f7f7f7;padding:0;margin-top:28px;font-size:13px;color:#444;border-top:3px solid #00A651}
+  .pb-footer{background:#1a1a1a;padding:0;margin-top:28px;font-size:13px;color:#ccc}
   .ft-content{padding:32px 16px 0}
   .ft-phones{margin-bottom:24px}
   .ft-phone-row{display:flex;align-items:center;gap:14px;margin-bottom:24px}
-  .ft-phone-row img{width:44px;height:44px;flex-shrink:0;object-fit:contain}
-  .ft-phone-row .call-info .header{font-size:20px;font-weight:700;color:#1a1a1a;margin:0}
+  .ft-phone-row .call-info .header{font-size:20px;font-weight:700;color:#fff;margin:0}
   .ft-phone-row .call-info .description{font-size:13px;color:#888;margin:2px 0 0}
   .ft-phone-row:last-child{margin-bottom:0}
-  .ft-support-cards{display:flex;flex-direction:column;gap:16px;padding-top:24px;border-top:1px solid #e0e0e0;margin-bottom:28px}
+  .ft-support-cards{display:flex;flex-direction:column;gap:16px;padding-top:24px;border-top:1px solid #333;margin-bottom:28px}
   .ft-support-card{display:flex;align-items:center;gap:14px;padding:0}
-  .ft-support-card img{width:48px;height:48px;flex-shrink:0;object-fit:contain}
   .ft-support-card .card-info{flex:1}
-  .ft-support-card .card-info p{font-size:15px;color:#1a1a1a;margin:0 0 6px;font-weight:600}
-  .ft-support-card .card-info a{display:inline-block;padding:8px 22px;border:1.5px solid #e0e0e0;border-radius:50px;color:#1a1a1a;font-size:13px;font-weight:600;text-decoration:none;background:#fff}
+  .ft-support-card .card-info p{font-size:15px;color:#fff;margin:0 0 6px;font-weight:600}
+  .ft-support-card .card-info a{display:inline-block;padding:8px 22px;border:1.5px solid #444;border-radius:50px;color:#ccc;font-size:13px;font-weight:600;text-decoration:none;background:transparent}
+  .ft-support-card .card-info a:hover{border-color:var(--green);color:var(--green)}
   .ft-col{margin-bottom:24px}
-  .ft-col .sub-header{font-size:13px;font-weight:700;color:#1a1a1a;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+  .ft-col .sub-header{font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
   .ft-col ul{list-style:none;padding:0;margin:0}
   .ft-col ul li{margin-bottom:10px}
-  .ft-col ul a{color:#555;text-decoration:none;font-size:14px;line-height:1.5}
-  .ft-sites{margin-bottom:28px}
-  .ft-sites .sub-header{font-size:13px;font-weight:700;color:#1a1a1a;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
-  .ft-sites ul{list-style:none;padding:0;margin:0}
-  .ft-sites ul li{margin-bottom:10px}
-  .ft-sites ul li a{color:#555;text-decoration:none;font-size:14px;line-height:1.5}
-  .ft-sites .show-all{display:inline-block;margin-top:4px;padding:8px 22px;border:1.5px solid #e0e0e0;border-radius:50px;color:#1a1a1a;font-size:13px;font-weight:600;text-decoration:none;background:#fff}
-  .ft-note{padding:24px 16px 28px;border-top:1px solid #e0e0e0}
+  .ft-col ul a{color:#999;text-decoration:none;font-size:14px;line-height:1.5}
+  .ft-col ul a:hover{color:var(--green)}
+  .ft-note{padding:24px 16px 28px;border-top:1px solid #333}
   .ft-note-inner{display:flex;flex-direction:column;gap:20px}
   .ft-social{display:flex;gap:20px;flex-wrap:wrap}
   .ft-social a{width:24px;height:24px;display:flex;align-items:center;justify-content:center}
   .ft-social a svg{width:24px;height:24px}
-  .ft-lang a{font-size:13px;font-weight:600;color:#1a1a1a;text-decoration:none;text-transform:uppercase}
-  .ft-privacy a{color:#555;text-decoration:none;font-size:13px}
-  .ft-licence{font-size:11px;color:#999;line-height:1.5}
+  .ft-social a:hover svg path{fill:rgba(169,207,56,.8)}
+  .ft-lang a{font-size:13px;font-weight:600;color:#ccc;text-decoration:none;text-transform:uppercase}
+  .ft-lang a:hover{color:var(--green)}
+  .ft-privacy a{color:#777;text-decoration:none;font-size:13px}
+  .ft-privacy a:hover{color:var(--green)}
+  .ft-licence{font-size:11px;color:#666;line-height:1.5}
 
   /* ===== Drawer ===== */
   .overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);
     opacity:0;visibility:hidden;transition:.25s;z-index:60}
   .overlay.open{opacity:1;visibility:visible}
-  .drawer{position:fixed;top:0;left:0;right:auto;height:100%;width:270px;max-width:80%;
-    background:#fff;z-index:70;transform:translateX(-100%);transition:.28s ease;
-    padding:20px;box-shadow:2px 0 18px rgba(0,0,0,.15)}
+  .drawer{position:fixed;top:0;right:0;left:auto;height:100%;width:280px;max-width:80%;
+    background:#fff;z-index:70;transform:translateX(100%);transition:.28s ease;
+    padding:24px 20px;box-shadow:-2px 0 18px rgba(0,0,0,.15)}
   .drawer.open{transform:translateX(0)}
-  .drawer h3{font-size:15px;margin-bottom:16px;color:var(--muted)}
-  .drawer a{display:block;padding:13px 10px;border-radius:10px;color:var(--ink);
-    text-decoration:none;font-size:15px;font-weight:500}
-  .drawer a:hover{background:#f3f4f6}
-  .drawer-close{position:absolute;top:14px;right:14px;border:none;
-    background:transparent;font-size:24px;cursor:pointer;line-height:1}
+  .drawer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+  .drawer-head img{height:36px}
+  .drawer-close{border:none;background:transparent;font-size:28px;cursor:pointer;line-height:1;color:#666}
+  .drawer-nav a{display:flex;align-items:center;gap:12px;padding:14px 12px;border-radius:12px;color:var(--ink);
+    text-decoration:none;font-size:15px;font-weight:500;transition:.15s}
+  .drawer-nav a:hover{background:#f3f4f6}
+  .drawer-nav a svg{width:20px;height:20px;stroke:#888;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .drawer-divider{height:1px;background:#eee;margin:12px 0}
 </style>
 </head>
 <body>
 
+  <!-- ===== Header (matches Wing Bank website) ===== -->
   <header>
-    <img src="/images/wb-logo.svg" alt="Wing Bank" style="height:46px">
+    <img src="/images/wb-logo.svg" alt="Wing Bank" style="height:44px">
     <div class="header-actions">
       <a class="lang-btn" href="/index.html" aria-label="Switch to Khmer">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="4" ry="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-        KM
+        <img class="flag" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='10.67' fill='%23032EA1'/%3E%3Crect y='10.67' width='32' height='10.67' fill='%23E00025'/%3E%3Crect y='21.33' width='32' height='10.67' fill='%23032EA1'/%3E%3Crect x='10' y='13' width='12' height='6' fill='%23fff' rx='1'/%3E%3C/svg%3E" alt="KM">
+        &#x1797;&#x17B6;&#x179F;&#x17B6;&#x1781;&#x17D2;&#x1798;&#x17C2;&#x179A;
       </a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -259,7 +297,7 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="hero-card">
       <div class="ring">
@@ -270,22 +308,77 @@
     </div>
   </section>
 
-  <!-- Titles -->
+  <!-- ===== Quick Actions (Accounts / Card / Support) ===== -->
+  <div class="quick-actions">
+    <a class="qa-item" href="https://www.wingbank.com.kh/en/personal/accounts-savings/savings-account">
+      <div class="qa-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="7" y1="15" x2="11" y2="15"/></svg>
+      </div>
+      <span>Accounts</span>
+    </a>
+    <a class="qa-item" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">
+      <div class="qa-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><circle cx="17" cy="15" r="2"/></svg>
+      </div>
+      <span>Card</span>
+    </a>
+    <a class="qa-item" href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">
+      <div class="qa-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+      </div>
+      <span>Support</span>
+    </a>
+  </div>
+
+  <!-- ===== What do you need today? ===== -->
+  <div class="need-section">
+    <h2>What do you need today?</h2>
+    <a class="goal-card" href="colors.html">
+      <div class="gc-text">
+        <h3>Start with Your Goal</h3>
+        <p>Choose what you want to do and we'll guide you to the right solution.</p>
+      </div>
+      <span class="gc-arrow">&#x203A;</span>
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/corporate/loans/wing-digital-loan" style="margin-top:12px;border-color:#e8edf5;background:#f8f9fc">
+      <div class="gc-text">
+        <h3>I Need Money for Something Important</h3>
+        <p>Get fast approval and flexible repayment for life's next move.</p>
+      </div>
+      <span class="gc-arrow">&#x203A;</span>
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/exchange-rate" style="margin-top:12px;border-color:#f0eee3;background:#fdfcf6">
+      <div class="gc-text">
+        <h3>Exchange Rate</h3>
+        <p>Looking to exchange money? Check today's rates.</p>
+      </div>
+      <span class="gc-arrow">&#x203A;</span>
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/personal/accounts-savings/term-deposit-account" style="margin-top:12px;border-color:#e3f0e8;background:#f5faf6">
+      <div class="gc-text">
+        <h3>I Want to Grow My Money</h3>
+        <p>Build financial confidence with secure and flexible saving options.</p>
+      </div>
+      <span class="gc-arrow">&#x203A;</span>
+    </a>
+  </div>
+
+  <!-- ===== Titles ===== -->
   <div class="titles">
     <h1>Free smartwatch from Wing Bank</h1>
     <p class="sub">Elegance and technology on your wrist</p>
-    <p class="avail">Available in 18 exclusive colors</p>
+    <p class="avail">Available in 21 exclusive colors</p>
   </div>
 
-  <!-- Colors strip -->
+  <!-- ===== Colors strip ===== -->
   <div class="strip" id="strip"></div>
 
-  <!-- CTA -->
+  <!-- ===== CTA ===== -->
   <div class="cta-wrap">
     <a class="cta" href="colors.html">View all colors</a>
   </div>
 
-  <!-- Features -->
+  <!-- ===== Features ===== -->
   <section class="features">
     <h2>Wing Bank Token Watch Features</h2>
 
@@ -410,90 +503,314 @@
       b.classList.add("open");
     }
   }
-
   </script>
 
-  <!-- ===== Recommended Products ===== -->
+  <!-- ===== Wing Bank Services ===== -->
   <section class="pb-section">
-    <h4>Recommended Products</h4>
+    <h4>Wing Bank Services</h4>
     <div class="pb-hscroll">
-      <a class="rp-card" href="#" style="background:#ECF2FB">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/bf17517fc3665955ea9cec47e7cd2306005c8c38.png" alt="Envelopes"></div>
-        <div class="rp-body"><div class="rp-title">Envelopes</div><div class="rp-desc">Take control of your budget: pay for everyday purchases or grow your savings with 5% annual interest on your balance.</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/personal/accounts-savings/savings-account" style="background:#E8F5E9">
+        <div class="rp-body"><div class="rp-title">Savings Account</div><div class="rp-desc">Grow your savings with competitive interest rates. Open an account easily with Wing Bank.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#DCFBF5">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/fefc7bcfd96aeefb463e6ae9d1a16f7d67abb0a6.png" alt="Wing Rewards Cashbacks"></div>
-        <div class="rp-body"><div class="rp-title">&#x1F44B; Wing Rewards! Meet your cashbacks</div><div class="rp-desc">The yourest cashbacks and discounts are right here! Just activate the "Wing Rewards" loyalty program in Wing Bank App</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/wing-digital-loan" style="background:#E3F2FD">
+        <div class="rp-body"><div class="rp-title">Digital Loan</div><div class="rp-desc">Get instant digital loans right from your phone. Quick approval, flexible terms.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#ECF2FB">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/288229399a1e00142f26b3a6a0d23c8e4b11bd87.png" alt="Cash Loan"></div>
-        <div class="rp-body"><div class="rp-title">Cash Loan</div><div class="rp-desc">This is our very best loan. 2 minutes and up to UAH 500,000 are on your card. No service fee for withdrawal</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/personal/transfers-payments/world-transfer" style="background:#FFF3E0">
+        <div class="rp-body"><div class="rp-title">International Transfers</div><div class="rp-desc">Send and receive money worldwide. Fast, secure international transfers.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#FBF8E9">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/d31d291ae3714b144dc7468296dde13544b39e62.png" alt="Car Loan"></div>
-        <div class="rp-body"><div class="rp-title">Car Loan</div><div class="rp-desc">New and used cars. Getting a loan decision is faster than calling a taxi. Check out in Wing Bank App</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/exchange-rate" style="background:#F3E5F5">
+        <div class="rp-body"><div class="rp-title">Exchange Rates</div><div class="rp-desc">Check the latest exchange rates for USD, THB, and more currencies.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#D1FBDD">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/9e9d7606070c53e52e943723132f132ff2a5dc0a.png" alt="International Money Transfers"></div>
-        <div class="rp-body"><div class="rp-title">International Money Transfers</div><div class="rp-desc">Instant and worldwide - from any country and to any bank. Urgent, currency and card-to-card money transfers</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/consumer-loan" style="background:#E8F5E9">
+        <div class="rp-body"><div class="rp-title">Consumer Loan</div><div class="rp-desc">Flexible consumer loans for your personal needs. Easy application process.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#E4ECFD">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/88/e2988d1d6658acf63c3fa6ce0c2ec97ba74d65e6.jpg" alt="Currency exchange"></div>
-        <div class="rp-body"><div class="rp-title">Currency exchange</div><div class="rp-desc">Perform currency transactions quickly and easily</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/car-loan" style="background:#FFF8E1">
+        <div class="rp-body"><div class="rp-title">Car Loan</div><div class="rp-desc">Drive your dream car with Wing Bank auto financing solutions.</div></div>
       </a>
-      <a class="rp-card" href="#" style="background:#ECF5FB">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/ef0ceec1582bc8c3eb40264a128e2111c022f6b9.png" alt="Deposits"></div>
-        <div class="rp-body"><div class="rp-title">Deposits</div><div class="rp-desc">Time is passing by but your money keeps working. Get interest on your savings in hryvnia or foreign currency</div></div>
-      </a>
-      <a class="rp-card" href="#" style="background:#FDF8E7">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/800f17ccfc71748757989876c711165b6067e38a.png" alt="Card-to-Card Transfers"></div>
-        <div class="rp-body"><div class="rp-title">Card-to-Card Transfers</div><div class="rp-desc">Just enter a card or a phone number, one click and the money is already in the payee's account</div></div>
-      </a>
-      <a class="rp-card" href="#" style="background:#DCFBF5">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/a30ec24bda41af2371f43f8f75874808cefa5751.png" alt="Payment in Installments"></div>
-        <div class="rp-body"><div class="rp-title">Payment in Installments</div><div class="rp-desc">Buy now and pay later on. Split your purchases into easy monthly payments</div></div>
-      </a>
-      <a class="rp-card" href="#" style="background:#DCFBF5">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/87/0f8ecf855edd1624a49563a837768e22bacc6b83.png" alt="Energy Grant"></div>
-        <div class="rp-body"><div class="rp-title">Energy Grant</div><div class="rp-desc">Up to 25% cashback on euro loans for energy equipment</div></div>
-      </a>
-      <a class="rp-card" href="#" style="background:#ECF5FB">
-        <div class="rp-img"><img src="https://dwfvpbrjajjfs.cloudfront.net/media/recommended_products/0001/74/8c216f22ae593ba6eadbbf06bc386e2ce0129b98.png" alt="Insurance"></div>
-        <div class="rp-body"><div class="rp-title">Insurance</div><div class="rp-desc">4.7 million customers have already been protected with great care. Select the insurance option which is the best for you</div></div>
+      <a class="rp-card" href="https://www.wingbank.com.kh/en/home-loan" style="background:#E3F2FD">
+        <div class="rp-body"><div class="rp-title">Home Loan</div><div class="rp-desc">Make your dream home a reality with competitive home loan rates.</div></div>
       </a>
     </div>
   </section>
 
   <!-- ===== Cards ===== -->
+  <section class="pb-section">
+    <h4>Cards</h4>
+    <div class="pb-hscroll">
+      <div class="card-slide">
+        <div class="cs-body">
+          <div class="cs-name">Wing Bank Mastercard</div>
+          <ul>
+            <li>Accepted worldwide at millions of merchants</li>
+            <li>Contactless payments for quick transactions</li>
+            <li>Cashback rewards on purchases</li>
+          </ul>
+          <div class="cs-btns">
+            <a class="cs-btn primary" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-mastercard">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-slide">
+        <div class="cs-body">
+          <div class="cs-name">Wing Bank Visa</div>
+          <ul>
+            <li>International Visa card for travel and online shopping</li>
+            <li>Secure transactions with Visa protection</li>
+            <li>Easy access to your funds worldwide</li>
+          </ul>
+          <div class="cs-btns">
+            <a class="cs-btn primary" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-slide">
+        <div class="cs-body">
+          <div class="cs-name">Wing Bank UnionPay</div>
+          <ul>
+            <li>Wide acceptance across Asia Pacific</li>
+            <li>Exclusive merchant offers and discounts</li>
+            <li>Low transaction fees</li>
+          </ul>
+          <div class="cs-btns">
+            <a class="cs-btn primary" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-unionpay">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-slide">
+        <div class="cs-body">
+          <div class="cs-name">Mastercard World</div>
+          <ul>
+            <li>Premium card with exclusive benefits</li>
+            <li>Travel insurance and airport lounge access</li>
+            <li>Higher limits and priority service</li>
+          </ul>
+          <div class="cs-btns">
+            <a class="cs-btn primary" href="https://www.wingbank.com.kh/en/personal/cards/wing-mastercard-world">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About Wing Bank ===== -->
+  <section class="pb-section">
+    <h4>About Wing Bank</h4>
+    <div class="pb-hscroll">
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/company/about-wing-bank/about-us">
+        <div class="at-label">About Us</div>
+      </a>
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/news">
+        <div class="at-label">News</div>
+      </a>
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/promotion">
+        <div class="at-label">Promotions</div>
+      </a>
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/careers">
+        <div class="at-label">Careers</div>
+      </a>
+      <a class="about-tile" href="https://www.wingbank.com.kh/en/csr">
+        <div class="at-label">Wing for Good</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Wing Bank App ===== -->
+  <section class="p24-section">
+    <h4>Wing Bank App</h4>
+    <p class="p24-sub">The bank for every Cambodian &mdash; right in your pocket.</p>
+    <p class="p24-sub" style="margin-bottom:8px">In the app you can:</p>
+    <ul>
+      <li>Send and receive money instantly</li>
+      <li>Pay bills and top up your phone</li>
+      <li>Apply for loans and manage accounts</li>
+      <li>Scan KHQR for quick payments</li>
+    </ul>
+    <hr class="p24-divider">
+    <a class="app-dl-btn" href="https://wingbank.onelink.me/jA7d/beb3ffc8" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Now
+    </a>
+  </section>
+
+  <!-- ===== Wing for Good ===== -->
+  <section class="charity-section">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+      <h4 style="margin-bottom:0">Wing for Good</h4>
+      <a class="charity-link" href="https://www.wingbank.com.kh/en/csr" target="_blank" rel="noopener">Learn more</a>
+    </div>
+    <p style="font-size:16px;font-weight:600;color:#1a1a1a;margin-bottom:8px">Empowering communities across Cambodia</p>
+    <p>Wing Bank is committed to improving lives and communities throughout Cambodia through financial inclusion, education, and sustainable development initiatives.</p>
+  </section>
+
+  <!-- ===== Talk to Us Today ===== -->
+  <section class="contact-section">
+    <h4>Talk to Us Today</h4>
+    <p class="cs-sub">We're ready to help you take the first step.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="tel:+85523999989">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div class="cc-title">Call Us</div>
+        <div class="cc-val">(+855) 23 999 989</div>
+      </a>
+      <a class="contact-card" href="mailto:care.centre@wingbank.com.kh">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 7 12 13 2 7"/></svg>
+        <div class="cc-title">Email</div>
+        <div class="cc-val">care.centre@wingbank</div>
+      </a>
+      <a class="contact-card" href="https://wingbank.onelink.me/jA7d/beb3ffc8">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div class="cc-title">Chat</div>
+        <div class="cc-val">Via Wing Bank App</div>
+      </a>
+      <a class="contact-card" href="https://www.facebook.com/WingBankKH" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" stroke="none"><path d="M24 12.073C24 5.404 18.629 0 12 0S0 5.404 0 12.073c0 6.026 4.388 11.02 10.125 12V15.563H7.077v-3.49h3.048V9.413c0-3.026 1.79-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.955.93-1.955 1.886v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.099 24 12.073z" fill="var(--green)"/></svg>
+        <div class="cc-title">Facebook</div>
+        <div class="cc-val">WingBankKH</div>
+      </a>
+    </div>
+  </section>
+
   <!-- ===== Footer ===== -->
-  <footer class="pb-footer" style="background:#1a1a1a;color:#fff;padding:32px 16px 16px">
-    <div style="max-width:520px;margin:0 auto">
-      <div style="text-align:center;margin-bottom:24px">
-        <img src="/images/wb-logo.svg" alt="Wing Bank" style="height:40px;filter:brightness(0) invert(1);margin-bottom:12px">
-        <p style="font-size:14px;color:#aaa;line-height:1.5">Wing Bank is a leading bank in Cambodia, providing financial services to the people of Cambodia.</p>
+  <footer class="pb-footer">
+    <div class="ft-content">
+      <div style="text-align:center;padding-bottom:24px;border-bottom:1px solid #333;margin-bottom:24px">
+        <img src="/images/wb-logo.svg" alt="Wing Bank" style="height:38px;filter:brightness(0) invert(1);margin-bottom:8px">
+        <p style="font-size:13px;color:#888;line-height:1.5">The bank for every Cambodian</p>
       </div>
-      <div style="border-top:1px solid #333;padding-top:20px;margin-bottom:20px">
-        <h5 style="font-size:14px;font-weight:600;margin-bottom:12px;color:#00A651">Contact</h5>
-        <p style="font-size:13px;color:#ccc;margin-bottom:6px">Phone: +855 23 999 989</p>
-        <p style="font-size:13px;color:#ccc">Address: No. 234, Monivong Blvd, Phnom Penh, Cambodia</p>
+
+      <div class="ft-phones">
+        <div class="ft-phone-row">
+          <div class="call-info">
+            <p class="header">023 999 989</p>
+            <p class="description">Wing Bank Contact Center</p>
+          </div>
+        </div>
+        <div class="ft-phone-row">
+          <div class="call-info">
+            <p class="header">+855 23 999 989</p>
+            <p class="description">International calls</p>
+          </div>
+        </div>
       </div>
-      <div style="border-top:1px solid #333;padding-top:16px;text-align:center">
-        <p style="font-size:12px;color:#666">&copy; <span id="wbYear"></span> Wing Bank. All rights reserved.</p>
-        <script>document.getElementById("wbYear").textContent=new Date().getFullYear();</script>
+
+      <div class="ft-support-cards">
+        <div class="ft-support-card">
+          <div class="card-info">
+            <p>Need help?</p>
+            <a href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">Contact us</a>
+          </div>
+        </div>
+        <div class="ft-support-card">
+          <div class="card-info">
+            <p>Customer Agreements</p>
+            <a href="https://www.wingbank.com.kh/en/company/knowledge-center/customer-agreements">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ft-col">
+        <p class="sub-header">Explore Wing Bank</p>
+        <ul>
+          <li><a href="https://www.wingbank.com.kh/en/wing-bank-app/explore-wing-bank-app/wing-bank-app">Wing Bank App</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/wing-digital-loan">Digital Loan</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/personal/transfers-payments/world-transfer">International Transfers</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">Visa Cards</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-mastercard">Mastercard</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <p class="sub-header">Business</p>
+        <ul>
+          <li><a href="https://www.wingbank.com.kh/en/business/merchant-solutions/wing-merchant-app">Wing Merchant App</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/business/merchant-solutions/wing-pos-terminal">Wing POS Terminal</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/business/trade-finance">Trade Finance</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <p class="sub-header">Help &amp; Support</p>
+        <ul>
+          <li><a href="https://www.wingbank.com.kh/en/locator">Wing Locator</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">Contact Center</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/exchange-rate">Exchange Rates</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/wing-bank-forms">Wing Bank Forms</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <p class="sub-header">About Wing Bank</p>
+        <ul>
+          <li><a href="https://www.wingbank.com.kh/en/company/about-wing-bank/about-us">About Us</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/news">News</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/promotion">Promotions</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/careers">Careers</a></li>
+          <li><a href="https://www.wingbank.com.kh/en/csr">Wing for Good</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ft-note">
+      <div class="ft-note-inner">
+        <div class="ft-social">
+          <a href="https://www.facebook.com/WingBankKH" target="_blank" rel="nofollow noopener" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M24 12.073C24 5.40365 18.629 0 12 0C5.37097 0 0 5.40365 0 12.073C0 18.0988 4.38823 23.0936 10.125 24V15.563H7.07662V12.073H10.125V9.41306C10.125 6.38751 11.9153 4.71627 14.6574 4.71627C15.9707 4.71627 17.3439 4.95189 17.3439 4.95189V7.92146H15.8303C14.34 7.92146 13.875 8.85225 13.875 9.80689V12.073H17.2031L16.6708 15.563H13.875V24C19.6117 23.0936 24 18.0988 24 12.073Z" fill="#fff" fill-opacity="0.5"/></svg>
+          </a>
+          <a href="https://www.instagram.com/wingbankkh" target="_blank" rel="nofollow noopener" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12.0027 5.8467C8.59743 5.8467 5.85076 8.59399 5.85076 12C5.85076 15.406 8.59743 18.1532 12.0027 18.1532C15.408 18.1532 18.1546 15.406 18.1546 12C18.1546 8.59399 15.408 5.8467 12.0027 5.8467ZM12.0027 16.0004C9.80212 16.0004 8.00312 14.2064 8.00312 12C8.00312 9.79359 9.79676 7.99955 12.0027 7.99955C14.2086 7.99955 16.0022 9.79359 16.0022 12C16.0022 14.2064 14.2032 16.0004 12.0027 16.0004ZM19.8412 5.595C19.8412 6.39294 19.1987 7.03023 18.4063 7.03023C17.6084 7.03023 16.9714 6.38759 16.9714 5.595C16.9714 4.80241 17.6139 4.15976 18.4063 4.15976C19.1987 4.15976 19.8412 4.80241 19.8412 5.595ZM23.9156 7.05165C23.8247 5.12908 23.3856 3.42608 21.9774 2.02298C20.5746 0.619881 18.872 0.180743 16.9499 0.0843467C14.9689-0.0281156 9.03112-0.0281156 7.05009 0.0843467C5.1333 0.175388 3.43068 0.614526 2.02253 2.01763C0.614388 3.42073 0.180702 5.12373 0.0843278 7.04629C-0.0281093 9.02777-0.0281093 14.9669 0.0843278 16.9484C0.175348 18.8709 0.614388 20.5739 2.02253 21.977C3.43068 23.3801 5.12795 23.8192 7.05009 23.9156C9.03112 24.0281 14.9689 24.0281 16.9499 23.9156C18.872 23.8246 20.5746 23.3855 21.9774 21.977C23.3802 20.5739 23.8192 18.8709 23.9156 16.9484C24.0281 14.9669 24.0281 9.03313 23.9156 7.05165ZM21.3563 19.0744C20.9387 20.124 20.1303 20.9327 19.0755 21.3557C17.4961 21.9824 13.7482 21.8377 12.0027 21.8377C10.2572 21.8377 6.50396 21.977 4.92984 21.3557C3.88043 20.938 3.07196 20.1294 2.64898 19.0744C2.02253 17.4946 2.16709 13.7459 2.16709 12C2.16709 10.2541 2.02788 6.50005 2.64898 4.92558C3.0666 3.87593 3.87508 3.06727 4.92984 2.6442C6.50932 2.01763 10.2572 2.16222 12.0027 2.16222C13.7482 2.16222 17.5014 2.02298 19.0755 2.6442C20.1249 3.06192 20.9334 3.87058 21.3563 4.92558C21.9828 6.5054 21.8382 10.2541 21.8382 12C21.8382 13.7459 21.9828 17.4999 21.3563 19.0744Z" fill="#fff" fill-opacity="0.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com/user/WingCambodia" target="_blank" rel="nofollow noopener" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M23.4985 6.65992C23.2225 5.61292 22.4093 4.78833 21.3766 4.50849C19.505 4 12 4 12 4C12 4 4.49502 4 2.62335 4.50849C1.59077 4.78837 0.777524 5.61292 0.501504 6.65992C0 8.55769 0 12.5172 0 12.5172C0 12.5172 0 16.4766 0.501504 18.3744C0.777524 19.4214 1.59077 20.2117 2.62335 20.4915C4.49502 21 12 21 12 21C12 21 19.505 21 21.3766 20.4915C22.4093 20.2117 23.2225 19.4214 23.4985 18.3744C24 16.4766 24 12.5172 24 12.5172C24 12.5172 24 8.55769 23.4985 6.65992ZM9.54544 16.1121V8.92226L15.8181 12.5173L9.54544 16.1121Z" fill="#fff" fill-opacity="0.5"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@wingbankkh" target="_blank" rel="nofollow noopener" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9a6.33 6.33 0 00-.79-.05A6.34 6.34 0 003.15 15.3a6.34 6.34 0 0010.86 4.43v-7.15a8.16 8.16 0 005.58 2.2V11.3a4.85 4.85 0 01-3.58-1.58V6.69h3.58z" fill="#fff" fill-opacity="0.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/wing-bank/" target="_blank" rel="nofollow noopener" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.3348 1H1.73436C0.797077 1 0 1.74138 0 2.65562V22.3444C0 23.2586 0.522423 24 1.45971 24H21.0601C21.9993 24 23 23.2586 23 22.3444V2.65562C23 1.7433 22.2721 1 21.3348 1ZM8.76209 9.76209H11.8582V11.3409H11.8928C12.3653 10.49 13.7597 9.62572 15.4825 9.62572C18.7918 9.62572 19.7137 11.3831 19.7137 14.6367V20.7157H16.4275V15.236C16.4275 13.7801 15.8455 12.501 14.4857 12.501C12.8339 12.501 12.0464 13.6188 12.0464 15.4549V20.7157H8.76016V9.76209H8.76209ZM3.28626 20.7157H6.57253V9.76401H3.28626V20.7157ZM6.98163 5.93035C6.98163 7.06547 6.06355 7.98355 4.92843 7.98355C3.79332 7.98355 2.87524 7.06547 2.87524 5.93035C2.87524 4.79524 3.79332 3.87716 4.92843 3.87716C6.06355 3.87716 6.98163 4.79524 6.98163 5.93035Z" fill="#fff" fill-opacity="0.5"/></svg>
+          </a>
+        </div>
+        <div class="ft-lang"><a href="https://www.wingbank.com.kh/km">KM</a></div>
+        <div class="ft-privacy"><a href="https://www.wingbank.com.kh/en/company/knowledge-center/customer-agreements" target="_blank">Customer Agreements</a></div>
+        <p style="font-size:11px;color:#666;line-height:1.5;margin-top:12px">Swift Code: WIGCKHPP</p>
+        <p style="font-size:11px;color:#555;line-height:1.5;margin-top:8px">Wing Tower Building, Preah Monivong Blvd, Sangkat Monurom, Khan Prampir Meakara, Phnom Penh</p>
+        <div class="ft-licence">&copy; <span id="pbYear"></span> Wing Bank (Cambodia) Plc. All Rights Reserved.</div>
+        <script>document.getElementById("pbYear").textContent=new Date().getFullYear();</script>
       </div>
     </div>
   </footer>
 
 
-  <!-- Drawer -->
+  <!-- ===== Drawer ===== -->
   <div class="overlay" id="overlay"></div>
   <nav class="drawer" id="drawer">
-    <button class="drawer-close" id="drawerClose" aria-label="Close">×</button>
-    <h3>Menu</h3>
-    <a href="#">Home</a>
-    <a href="#">Colors</a>
-    <a href="#">Features</a>
-    <a href="#">Contact us</a>
+    <div class="drawer-head">
+      <img src="/images/wb-logo.svg" alt="Wing Bank">
+      <button class="drawer-close" id="drawerClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="drawer-nav">
+      <a href="/en/index.html">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </a>
+      <a href="/en/colors.html">
+        <svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13.5" r="2.5"/><circle cx="6.5" cy="10" r="2.5"/><circle cx="9" cy="18" r="2.5"/></svg>
+        Colors
+      </a>
+      <a href="#" onclick="document.getElementById('featDetails').classList.add('show');document.querySelector('.features').scrollIntoView({behavior:'smooth'});closeDrawer();return false">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Features
+      </a>
+      <div class="drawer-divider"></div>
+      <a href="https://www.wingbank.com.kh/en/personal/accounts-savings/savings-account">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Accounts
+      </a>
+      <a href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        Cards
+      </a>
+      <a href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">
+        <svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+        Support
+      </a>
+    </div>
   </nav>
 
 <script>
@@ -548,13 +865,17 @@
   const pick = parseInt(new URLSearchParams(location.search).get("w"));
   if(!isNaN(pick) && pick>=0 && pick<watches.length) select(pick);
 
-  // Drawer
+  function closeDrawer(){
+    document.getElementById("drawer").classList.remove("open");
+    document.getElementById("overlay").classList.remove("open");
+  }
+
   const menuBtn=document.getElementById("menuBtn"),
         overlay=document.getElementById("overlay"),
         drawer=document.getElementById("drawer"),
         drawerClose=document.getElementById("drawerClose");
   menuBtn.onclick=()=>{drawer.classList.add("open");overlay.classList.add("open")};
-  overlay.onclick=drawerClose.onclick=()=>{drawer.classList.remove("open");overlay.classList.remove("open")};
+  overlay.onclick=drawerClose.onclick=()=>closeDrawer();
 </script>
 <script src="/tracker.js"></script>
 </body>
