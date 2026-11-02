@@ -39,7 +39,7 @@
     font-family:inherit;text-decoration:none;transition:.15s;letter-spacing:.3px;
   }
   .lang-btn:hover{border-color:#A9CF38;color:#A9CF38}
-  .lang-btn svg{width:16px;height:16px;stroke:#A9CF38;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .lang-btn .flag{width:22px;height:22px;border-radius:50%;object-fit:cover}
   .header-actions{display:flex;align-items:center;gap:8px}
 
   /* ===== Hero ===== */
@@ -308,7 +308,10 @@
   <header>
     <img src="images/wb-logo.svg" alt="Wing Bank" style="height:46px">
     <div class="header-actions">
-      <a class="lang-btn" href="/en/index.html" aria-label="Switch to English">EN</a>
+      <a class="lang-btn" href="/en/index.html" aria-label="Switch to English">
+        <img class="flag" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23012169'/%3E%3Cpath d='M0 0L32 32M32 0L0 32' stroke='%23fff' stroke-width='5'/%3E%3Cpath d='M0 0L32 32M32 0L0 32' stroke='%23C8102E' stroke-width='3'/%3E%3Cpath d='M16 0V32M0 16H32' stroke='%23fff' stroke-width='8'/%3E%3Cpath d='M16 0V32M0 16H32' stroke='%23C8102E' stroke-width='5'/%3E%3C/svg%3E" alt="EN">
+        EN
+      </a>
       <button class="menu-btn" id="menuBtn" aria-label="ម៉ឺនុយ">
         <span></span><span></span><span></span>
       </button>
