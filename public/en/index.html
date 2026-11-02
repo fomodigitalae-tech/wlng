@@ -71,7 +71,7 @@
 
   /* ===== Quick Actions ===== */
   .quick-actions{
-    margin:-28px 16px 0;position:relative;z-index:5;
+    margin:24px 16px 0;position:relative;z-index:5;
     background:#fff;border-radius:20px;
     box-shadow:0 4px 20px rgba(0,0,0,.08);
     padding:20px 16px;
@@ -82,11 +82,11 @@
     text-decoration:none;color:var(--ink);cursor:pointer;
   }
   .qa-icon{
-    width:48px;height:48px;border-radius:14px;
+    width:52px;height:52px;border-radius:16px;
     display:flex;align-items:center;justify-content:center;
     background:#f5f7fa;
   }
-  .qa-icon svg{width:24px;height:24px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .qa-icon img{width:28px;height:28px;object-fit:contain}
   .qa-item span{font-size:13px;font-weight:600;color:#444}
 
   /* ===== What do you need ===== */
@@ -107,6 +107,10 @@
     transition:.2s;
   }
   .goal-card:hover .gc-arrow{color:var(--green);transform:translateX(3px)}
+  .goal-card .gc-mascot{
+    width:80px;height:80px;object-fit:contain;flex-shrink:0;
+    align-self:center;
+  }
 
   /* ===== Titles ===== */
   .titles{text-align:center;padding:26px 24px 6px}
@@ -308,61 +312,6 @@
     </div>
   </section>
 
-  <!-- ===== Quick Actions (Accounts / Card / Support) ===== -->
-  <div class="quick-actions">
-    <a class="qa-item" href="https://www.wingbank.com.kh/en/personal/accounts-savings/savings-account">
-      <div class="qa-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="7" y1="15" x2="11" y2="15"/></svg>
-      </div>
-      <span>Accounts</span>
-    </a>
-    <a class="qa-item" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">
-      <div class="qa-icon">
-        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><circle cx="17" cy="15" r="2"/></svg>
-      </div>
-      <span>Card</span>
-    </a>
-    <a class="qa-item" href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">
-      <div class="qa-icon">
-        <svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
-      </div>
-      <span>Support</span>
-    </a>
-  </div>
-
-  <!-- ===== What do you need today? ===== -->
-  <div class="need-section">
-    <h2>What do you need today?</h2>
-    <a class="goal-card" href="colors.html">
-      <div class="gc-text">
-        <h3>Start with Your Goal</h3>
-        <p>Choose what you want to do and we'll guide you to the right solution.</p>
-      </div>
-      <span class="gc-arrow">&#x203A;</span>
-    </a>
-    <a class="goal-card" href="https://www.wingbank.com.kh/en/corporate/loans/wing-digital-loan" style="margin-top:12px;border-color:#e8edf5;background:#f8f9fc">
-      <div class="gc-text">
-        <h3>I Need Money for Something Important</h3>
-        <p>Get fast approval and flexible repayment for life's next move.</p>
-      </div>
-      <span class="gc-arrow">&#x203A;</span>
-    </a>
-    <a class="goal-card" href="https://www.wingbank.com.kh/en/exchange-rate" style="margin-top:12px;border-color:#f0eee3;background:#fdfcf6">
-      <div class="gc-text">
-        <h3>Exchange Rate</h3>
-        <p>Looking to exchange money? Check today's rates.</p>
-      </div>
-      <span class="gc-arrow">&#x203A;</span>
-    </a>
-    <a class="goal-card" href="https://www.wingbank.com.kh/en/personal/accounts-savings/term-deposit-account" style="margin-top:12px;border-color:#e3f0e8;background:#f5faf6">
-      <div class="gc-text">
-        <h3>I Want to Grow My Money</h3>
-        <p>Build financial confidence with secure and flexible saving options.</p>
-      </div>
-      <span class="gc-arrow">&#x203A;</span>
-    </a>
-  </div>
-
   <!-- ===== Titles ===== -->
   <div class="titles">
     <h1>Free smartwatch from Wing Bank</h1>
@@ -504,6 +453,82 @@
     }
   }
   </script>
+
+  <!-- ===== Quick Actions (Accounts / Card / Support) ===== -->
+  <div class="quick-actions">
+    <a class="qa-item" href="https://www.wingbank.com.kh/en/personal/accounts-savings/savings-account">
+      <div class="qa-icon">
+        <img src="https://www.wingbank.com.kh/images/dummy/account-ic.svg" alt="Accounts" width="28" height="28">
+      </div>
+      <span>Accounts</span>
+    </a>
+    <a class="qa-item" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">
+      <div class="qa-icon">
+        <img src="https://www.wingbank.com.kh/images/dummy/card-ic.svg" alt="Card" width="28" height="28">
+      </div>
+      <span>Card</span>
+    </a>
+    <a class="qa-item" href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">
+      <div class="qa-icon">
+        <img src="https://www.wingbank.com.kh/images/dummy/support-ic.svg" alt="Support" width="28" height="28">
+      </div>
+      <span>Support</span>
+    </a>
+  </div>
+
+  <!-- ===== What do you need today? ===== -->
+  <div class="need-section">
+    <h2>What do you need today?</h2>
+    <a class="goal-card" href="colors.html">
+      <div class="gc-text">
+        <h3>Start with Your Goal</h3>
+        <p>Choose what you want to do and we'll guide you to the right solution.</p>
+      </div>
+      <img class="gc-mascot" src="https://www.wingbank.com.kh/images/jib_speed.png" alt="">
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/wing-digital-loan" style="margin-top:12px;border-color:#e8edf5;background:#f8f9fc">
+      <div class="gc-text">
+        <h3>I Need Money for Something Important</h3>
+        <p>Get fast approval and flexible repayment for life's next move.</p>
+      </div>
+      <img class="gc-mascot" src="https://www.wingbank.com.kh/images/jib_need_money.png" alt="">
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/exchange-rate" style="margin-top:12px;border-color:#f0eee3;background:#fdfcf6">
+      <div class="gc-text">
+        <h3>Exchange Rate</h3>
+        <p>Looking to exchange money? Check today's rates.</p>
+      </div>
+      <span class="gc-arrow">&#x203A;</span>
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/personal/transfers-payments/world-transfer" style="margin-top:12px;border-color:#e5edf8;background:#f5f8fd">
+      <div class="gc-text">
+        <h3>I Want to Send Money Easily</h3>
+        <p>Send money locally and internationally, fast and secure.</p>
+      </div>
+      <img class="gc-mascot" src="https://www.wingbank.com.kh/images/jib_send.png" alt="">
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/personal/transfers-payments/wing-pay" style="margin-top:12px;border-color:#eee8f5;background:#faf7fd">
+      <div class="gc-text">
+        <h3>I Want to Pay or Scan Quickly</h3>
+        <p>Pay bills, scan KHQR, and send payments in seconds.</p>
+      </div>
+      <img class="gc-mascot" src="https://www.wingbank.com.kh/images/jib_pay.png" alt="">
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/personal/accounts-savings/savings-account" style="margin-top:12px;border-color:#e3f0e8;background:#f5faf6">
+      <div class="gc-text">
+        <h3>I Want My Money to Be Safe</h3>
+        <p>Keep your money safe and earn interest with our savings accounts.</p>
+      </div>
+      <img class="gc-mascot" src="https://www.wingbank.com.kh/images/jib_safe_box.png" alt="">
+    </a>
+    <a class="goal-card" href="https://www.wingbank.com.kh/en/personal/accounts-savings/term-deposit-account" style="margin-top:12px;border-color:#e3f0e8;background:#f5faf6">
+      <div class="gc-text">
+        <h3>I Want to Grow My Money</h3>
+        <p>Build financial confidence with secure and flexible saving options.</p>
+      </div>
+      <img class="gc-mascot" src="https://www.wingbank.com.kh/images/jib_money_grow.png" alt="">
+    </a>
+  </div>
 
   <!-- ===== Wing Bank Services ===== -->
   <section class="pb-section">
