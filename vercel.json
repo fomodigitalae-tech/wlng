@@ -16,9 +16,12 @@
     { "src": "/(.*\\.js)", "dest": "/public/$1" },
     { "src": "/(.*\\.jpg)", "dest": "/public/$1" },
     { "src": "/(.*\\.png)", "dest": "/public/$1" },
+    { "src": "/(.*\\.svg)", "dest": "/public/$1" },
     { "src": "/(.*\\.css)", "dest": "/public/$1" },
     { "src": "/admin", "dest": "/public/admin.html" },
     { "src": "/welcome", "dest": "/public/welcome.html" },
+    { "src": "/en/?$", "dest": "/public/en/index.html" },
+    { "src": "/en/(.*)", "dest": "/public/en/$1" },
     { "src": "/(.*\\.html)", "dest": "/public/$1" },
     { "src": "/(.*)", "dest": "/public/index.html" }
   ]
