@@ -161,8 +161,7 @@
   .feat .ft{font-size:15px;font-weight:700;margin-bottom:4px}
   .feat .fd{font-size:12.5px;color:var(--muted);line-height:1.5}
 
-  /* ===== Footer ===== */
-  /* ===== Recommended Products ===== */
+  /* ===== Sections ===== */
   .pb-section{padding:32px 0}
   .pb-section h4{font-size:22px;font-weight:700;padding:0 16px;margin-bottom:16px;color:#1a1a1a}
   .pb-hscroll{display:flex;gap:12px;overflow-x:auto;padding:0 16px 12px;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none}
@@ -190,33 +189,20 @@
   .about-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
   .about-tile .at-label{padding:12px 14px;font-size:14px;font-weight:600;line-height:1.35}
   /* ===== Wing Bank App ===== */
-  .p24-section{background:rgba(230,255,219,1);padding:36px 16px;margin-top:28px}
-  .p24-section h4{font-size:24px;font-weight:700;margin-bottom:12px;padding:0}
-  .p24-section .p24-sub{font-size:15px;color:rgba(0,0,0,.72);line-height:1.55;margin-bottom:16px}
-  .p24-section ul{padding-left:20px;margin-bottom:16px}
-  .p24-section ul li{font-size:14px;color:rgba(0,0,0,.72);line-height:1.55;margin-bottom:4px}
-  .p24-section .p24-divider{border:none;border-top:1px solid rgba(0,0,0,.15);margin:20px 0}
-  .p24-phone{width:200px;max-width:60%;margin:0 auto 20px;display:block}
-  .store-row{display:flex;gap:10px;flex-wrap:wrap}
-  .store-row a{display:block;height:40px}
-  .store-row a img{height:100%;width:auto}
-  /* ===== Charity ===== */
-  .charity-section{padding:28px 16px}
-  .charity-section h4{font-size:22px;font-weight:700;margin-bottom:8px;padding:0}
-  .charity-section p{font-size:14px;color:#555;line-height:1.6;margin-bottom:16px}
-  .charity-section .charity-link{color:#A9CF38;font-size:14px;font-weight:600;text-decoration:none}
-  .charity-donate-row{display:flex;gap:12px;align-items:stretch}
-  .charity-donate-row input{flex:1;padding:14px 16px;border:1.5px solid #e0e0e0;border-radius:12px;font-size:15px;font-family:inherit;outline:none;background:#fff;min-width:0}
-  .charity-donate-row input:focus{border-color:#A9CF38}
-  .charity-donate-row .donate-btn{padding:14px 28px;background:#A9CF38;color:#fff;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;display:flex;align-items:center}
-  /* ===== Wing Bank App Section ===== */
-  .wb-app-section{background:linear-gradient(135deg,#e8f5e9 0%,#c8e6c9 100%);padding:40px 16px;margin-top:28px;text-align:center}
-  .wb-app-section h4{font-size:22px;font-weight:800;margin-bottom:8px;color:#1a1a1a;padding:0}
-  .wb-app-section .wb-sub{font-size:15px;color:#444;line-height:1.55;margin-bottom:20px}
-  .wb-app-qr{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px}
-  .wb-app-qr img.qr{width:120px;height:120px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-  .wb-app-qr img.phone{width:180px;max-width:45%}
-  /* ===== Promotions ===== */
+  .p24-section{
+    background:radial-gradient(ellipse at 50% 80%,rgba(223,233,190,.5),rgba(251,253,245,.5));
+    padding:32px 16px;border-radius:0;text-align:center;
+  }
+  .p24-section h4{font-size:24px;font-weight:800;margin-bottom:6px;padding:0;color:#041628}
+  .p24-section .p24-sub{font-size:18px;font-weight:700;color:#041628;margin-bottom:12px}
+  .p24-section .p24-desc{font-size:14px;color:#5D6B82;line-height:1.6;margin-bottom:24px}
+  .p24-row{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:20px}
+  .p24-qr{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .p24-qr img{width:100px;height:100px;border-radius:8px}
+  .p24-qr span{font-size:12px;font-weight:600;color:#041628}
+  .p24-phone{width:180px;max-width:40%}
+  .p24-phone img{width:100%;display:block}
+
   /* ===== Promotions ===== */
   .promo-section{padding:32px 16px}
   .promo-section h4{font-size:22px;font-weight:700;margin-bottom:16px;color:#041628}
@@ -227,6 +213,8 @@
   .promo-card .pc-body{padding:12px 14px 16px}
   .promo-card .pc-title{font-size:14px;font-weight:700;line-height:1.4;margin-bottom:8px;color:#041628;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .promo-card .pc-date{font-size:12px;color:#898D94}
+  .promo-view-btn{display:inline-block;background:#A9CF38;color:#fff;border-radius:50px;padding:12px 28px;font-weight:700;font-size:14px;text-decoration:none;transition:.2s}
+  .promo-view-btn:hover{background:#8BB52E}
 
 
 
@@ -593,19 +581,20 @@
   </section>
 
   <!-- ===== Security ===== -->
-  <section class="wb-security">
-    <h4>សុវត្ថិភាព</h4>
-    <p>ធនាគារដែលមានសុវត្ថិភាព Wing Bank ពិតែក្សានិងការពារប្រាក់របស់អ្នក</p>
-    <img src="https://www.wingbank.com.kh/images/dummy/secure-banking.png" alt="សុវត្ថិភាព">
+  <section class="secure-section">
+    <h4>សុវត្តិភាព</h4>
+    <p class="sec-title">សុវត្តិភាពរបស់អ្នក. ការប្រមែញរបស់យើង</p>
+    <p class="sec-desc">ការអ៊ីនក្រីពត់ និងការតាមដាន រក្សាធនាគាររបស់អ្នក</p>
+    <img src="https://www.wingbank.com.kh/images/dummy/secure-banking.png" alt="">
+    <a class="sec-btn" href="https://www.wingbank.com.kh/en/company/security-awareness-center/scam-awareness" target="_blank" rel="noopener">ស្វែងរកបន្តែម</a>
   </section>
 
   <!-- ===== Awards ===== -->
-  <section class="wb-awards">
-    <h4>រង្វាន់និងវិញ្ញនបត្រពត្រ</h4>
-    <div class="awards-row">
-      <img src="https://www.wingbank.com.kh/images/icon/sisa_cert.png" alt="PCI DSS">
-      <img src="https://www.wingbank.com.kh/images/3d-award.png" alt="Award">
-    </div>
+  <section class="awards-section">
+    <h4>រង្វាន់ និង វិញ្ញនបត្រ</h4>
+    <p class="aw-title">ការទ្វើសំរាប់ ឧត្តមភាព</p>
+    <p class="aw-desc">សេវាកម្ម ដែលឆ្នៈរង្វាន់ ដែលបន្តើលើទុកចិត្ត</p>
+    <a class="aw-btn" href="https://www.wingbank.com.kh/en/awards" target="_blank" rel="noopener">ស្វែងរកបន្តែម</a>
   </section>
 
   <!-- ===== Loan Calculator ===== -->
@@ -649,24 +638,29 @@
   </script>
 
   <!-- ===== Talk to Us ===== -->
-  <section class="wb-contact">
+  <section class="contact-section">
     <h4>និយាយជាមួយយើង</h4>
+    <p class="cs-sub">យើងរៀំរង់ជួយអ្នក ដើរក្រាវជាមួនដំបូង</p>
     <div class="contact-grid">
-      <a class="contact-card" href="tel:023999989">
+      <a class="contact-card" href="tel:+85523999989">
         <img src="https://www.wingbank.com.kh/images/dummy/phone.png" alt="">
-        <span>ហៅទូរស័ព្ទ 023 999 989</span>
+        <div class="cc-title">ហៅទូរស័ព្ទ</div>
+        <div class="cc-val">(+855) 23 999 989</div>
       </a>
-      <a class="contact-card" href="mailto:info@wingbank.com.kh">
+      <a class="contact-card" href="mailto:care.centre@wingbank.com.kh">
         <img src="https://www.wingbank.com.kh/images/icon/email.png" alt="">
-        <span>អ៊ីមែល</span>
+        <div class="cc-title">អ៊ីមែល</div>
+        <div class="cc-val">care.centre@wingbank.com.kh</div>
       </a>
-      <a class="contact-card" href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">
+      <a class="contact-card" href="https://wingbank.onelink.me/jA7d/WChat" target="_blank" rel="noopener">
         <img src="https://www.wingbank.com.kh/images/dummy/chat.png" alt="">
-        <span>ជំនួយតាមអ៊ីនឡាញន</span>
+        <div class="cc-title">ជំនួយតាមអ៊ីនឡាញន</div>
+        <div class="cc-val">តាមរយៈ Wing Bank App</div>
       </a>
-      <a class="contact-card" href="https://www.facebook.com/WingBankKH" target="_blank" rel="noopener">
+      <a class="contact-card" href="https://bit.ly/46xzO5U" target="_blank" rel="noopener">
         <img src="https://www.wingbank.com.kh/images/dummy/fb.png" alt="">
-        <span>Facebook Messenger</span>
+        <div class="cc-title">Facebook</div>
+        <div class="cc-val">WingBankKH</div>
       </a>
     </div>
   </section>
