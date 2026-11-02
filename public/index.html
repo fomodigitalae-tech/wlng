@@ -229,6 +229,61 @@
   .promo-card .pc-date{font-size:12px;color:#898D94}
 
 
+
+  /* ===== Security ===== */
+  .secure-section{
+    background:radial-gradient(ellipse at 50% 80%,rgba(200,220,245,.4),rgba(245,248,252,.5));
+    padding:32px 16px;text-align:center;
+  }
+  .secure-section h4{font-size:14px;font-weight:600;color:#A9CF38;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+  .secure-section .sec-title{font-size:22px;font-weight:800;color:#041628;margin-bottom:12px}
+  .secure-section .sec-desc{font-size:14px;color:#5D6B82;line-height:1.6;margin-bottom:20px}
+  .secure-section img{width:200px;max-width:60%;margin:0 auto 20px;display:block}
+  .sec-btn{display:inline-block;padding:12px 28px;background:#A9CF38;color:#fff;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;transition:.2s}
+  .sec-btn:hover{background:#8BB52E}
+
+  /* ===== Awards ===== */
+  .awards-section{
+    background:#0B1E2B;padding:32px 16px;text-align:center;color:#fff;
+  }
+  .awards-section h4{font-size:14px;font-weight:600;color:#A9CF38;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+  .awards-section .aw-title{font-size:22px;font-weight:800;margin-bottom:12px}
+  .awards-section .aw-desc{font-size:14px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:20px}
+  .aw-btn{display:inline-block;padding:12px 28px;background:#A9CF38;color:#fff;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;transition:.2s}
+  .aw-btn:hover{background:#8BB52E}
+
+  /* ===== Loan Calculator ===== */
+  .loan-section{padding:32px 16px;background:#f8f9fc}
+  .loan-section h4{font-size:22px;font-weight:700;margin-bottom:6px;color:#041628}
+  .loan-section .loan-sub{font-size:14px;color:#5D6B82;margin-bottom:20px}
+  .loan-form{background:#fff;border-radius:16px;padding:24px 16px;border:1px solid #E8ECF0}
+  .loan-row{margin-bottom:20px}
+  .loan-row label{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#333;margin-bottom:8px}
+  .loan-row label span{color:#A9CF38;font-weight:700}
+  .loan-range{width:100%;-webkit-appearance:none;height:6px;border-radius:3px;background:#E8ECF0;outline:none}
+  .loan-range::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#A9CF38;cursor:pointer;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+  .loan-result{background:#f0f7e6;border-radius:12px;padding:16px;text-align:center;margin-top:16px}
+  .loan-result .lr-label{font-size:13px;color:#555;margin-bottom:4px}
+  .loan-result .lr-value{font-size:28px;font-weight:800;color:#A9CF38}
+  .loan-result .lr-unit{font-size:14px;color:#666;font-weight:400}
+  .loan-cta{display:block;width:100%;background:#A9CF38;color:#fff;border:none;padding:14px;border-radius:50px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;font-family:inherit;text-align:center;text-decoration:none}
+  .loan-cta:hover{background:#8BB52E}
+
+  /* ===== Talk to Us ===== */
+  .contact-section{padding:32px 16px}
+  .contact-section h4{font-size:22px;font-weight:700;margin-bottom:6px;color:#041628}
+  .contact-section .cs-sub{font-size:14px;color:#5D6B82;margin-bottom:20px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .contact-card{
+    background:#fff;border-radius:16px;padding:20px 16px;
+    text-decoration:none;color:#1a1a1a;text-align:center;
+    transition:.2s;border:1px solid #E8ECF0;
+  }
+  .contact-card:hover{border-color:#A9CF38;transform:translateY(-2px)}
+  .contact-card img{height:48px;margin-bottom:10px;object-fit:contain}
+  .contact-card .cc-title{font-size:13px;font-weight:700;margin-bottom:4px;color:#041628}
+  .contact-card .cc-val{font-size:11px;color:#5D6B82}
+
   /* ===== Footer (white) ===== */
   .pb-footer{background:#fff;padding:0;margin-top:0;font-size:13px;color:#5D6B82;border-top:1px solid #E8ECF0}
   .ft-content{padding:32px 16px 0}
@@ -242,8 +297,8 @@
   .ft-bottom-inner{display:flex;flex-direction:column;gap:16px}
   .ft-brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .ft-brand img.ft-logo{height:50px}
-  .ft-certs{display:flex;align-items:center;gap:10px}
-  .ft-certs img{height:32px;object-fit:contain}
+  .ft-certs{display:flex;align-items:center;gap:10px;overflow:hidden}
+  .ft-certs img{height:32px;max-width:80px;object-fit:contain}
   .ft-social{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
   .ft-social a{width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:#5D6B82;border:1px solid #5D6B82;border-radius:8px;transition:.2s}
   .ft-social a:hover{color:#A9CF38;border-color:#A9CF38}
