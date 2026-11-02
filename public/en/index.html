@@ -25,15 +25,15 @@
   /* ===== Header ===== */
   header{
     height:64px;background:#fff;
-    display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:sticky;top:0;z-index:40;
-    box-shadow:0 1px 4px rgba(0,0,0,.06);
+    display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:fixed;width:100%;max-width:520px;top:0;z-index:50;
   }
   .menu-btn{
-    width:40px;height:40px;border:none;background:transparent;cursor:pointer;
-    display:flex;flex-direction:column;justify-content:center;gap:6px;border-radius:8px;
+    width:36px;height:36px;border:none;background:#EBEDEF;cursor:pointer;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;border-radius:50%;
   }
-  .menu-btn span{height:3px;width:26px;background:#1a1a1a;border-radius:2px}
-  .menu-btn:hover{background:#f3f4f6}
+  .menu-btn span{height:2.5px;width:18px;background:#333;border-radius:2px}
+  .menu-btn:hover{background:#dde0e3}
+  body{padding-top:64px}
   .lang-btn{
     display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px;
     border:none;background:#EBEDEF;color:#1a1a1a;
@@ -70,25 +70,6 @@
   @keyframes pop{from{opacity:0;transform:scale(.93)}to{opacity:1;transform:scale(1)}}
 
   /* ===== Quick Actions ===== */
-  .quick-actions{
-    margin:24px 16px 0;position:relative;z-index:5;
-    background:#fff;border-radius:20px;
-    box-shadow:0 4px 20px rgba(0,0,0,.08);
-    padding:20px 16px;
-    display:flex;justify-content:space-around;
-  }
-  .qa-item{
-    display:flex;flex-direction:column;align-items:center;gap:10px;
-    text-decoration:none;color:var(--ink);cursor:pointer;
-  }
-  .qa-icon{
-    width:52px;height:52px;border-radius:16px;
-    display:flex;align-items:center;justify-content:center;
-    background:#f5f7fa;
-  }
-  .qa-icon img{width:28px;height:28px;object-fit:contain}
-  .qa-item span{font-size:13px;font-weight:600;color:#444}
-
   /* ===== What do you need ===== */
   .need-section{padding:32px 16px 8px}
   .need-section h2{font-size:24px;font-weight:800;margin-bottom:18px;color:#1a1a1a}
@@ -293,10 +274,10 @@
   .ft-brand img.ft-logo{height:50px}
   .ft-certs{display:flex;align-items:center;gap:10px}
   .ft-certs img{height:32px;object-fit:contain}
-  .ft-social{display:flex;gap:16px;flex-wrap:wrap;margin-top:4px}
-  .ft-social a{width:28px;height:28px;display:flex;align-items:center;justify-content:center;color:#5D6B82;transition:.2s}
-  .ft-social a:hover{color:var(--green)}
-  .ft-social a svg{width:20px;height:20px}
+  .ft-social{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+  .ft-social a{width:30px;height:30px;display:flex;align-items:center;justify-content:center;color:#5D6B82;border:1px solid #5D6B82;border-radius:8px;transition:.2s}
+  .ft-social a:hover{color:var(--green);border-color:var(--green)}
+  .ft-social a svg{width:16px;height:16px}
   .ft-legal{display:flex;gap:16px;flex-wrap:wrap}
   .ft-legal a{color:#5D6B82;text-decoration:none;font-size:12px}
   .ft-legal a:hover{color:var(--green)}
@@ -325,7 +306,7 @@
 
   <!-- ===== Header (matches Wing Bank website) ===== -->
   <header>
-    <img src="/images/wb-logo.svg" alt="Wing Bank" style="height:44px">
+    <img src="/images/wb-logo.svg" alt="Wing Bank" style="height:40px">
     <div class="header-actions">
       <a class="lang-btn" href="/index.html" aria-label="Switch to Khmer">
         <img class="flag" src="https://www.wingbank.com.kh/images/dummy/km-flag.svg" alt="">
@@ -489,28 +470,6 @@
     }
   }
   </script>
-
-  <!-- ===== Quick Actions ===== -->
-  <div class="quick-actions">
-    <a class="qa-item" href="https://www.wingbank.com.kh/en/personal/accounts-savings/savings-account">
-      <div class="qa-icon">
-        <img src="https://www.wingbank.com.kh/images/dummy/account-ic.svg" alt="Accounts" width="28" height="28">
-      </div>
-      <span>Accounts</span>
-    </a>
-    <a class="qa-item" href="https://www.wingbank.com.kh/en/personal/cards/wing-bank-visa-cards">
-      <div class="qa-icon">
-        <img src="https://www.wingbank.com.kh/images/dummy/card-ic.svg" alt="Cards" width="28" height="28">
-      </div>
-      <span>Cards</span>
-    </a>
-    <a class="qa-item" href="https://www.wingbank.com.kh/en/need-assistance-contact-us-now">
-      <div class="qa-icon">
-        <img src="https://www.wingbank.com.kh/images/dummy/support-ic.svg" alt="Support" width="28" height="28">
-      </div>
-      <span>Support</span>
-    </a>
-  </div>
 
   <!-- ===== What do you need today? ===== -->
   <div class="need-section">
