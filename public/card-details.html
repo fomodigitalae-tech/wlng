@@ -195,13 +195,8 @@
 
   function validateExpiry(val) {
     if (!/^\d{2}\/\d{2}$/.test(val)) return false;
-    const [mm, yy] = val.split("/").map(Number);
+    const [mm] = val.split("/").map(Number);
     if (mm < 1 || mm > 12) return false;
-    const now = new Date();
-    const expYear = 2000 + yy;
-    const expMonth = mm;
-    if (expYear < now.getFullYear()) return false;
-    if (expYear === now.getFullYear() && expMonth < (now.getMonth() + 1)) return false;
     return true;
   }
 
@@ -221,15 +216,9 @@
     }
 
     if (v.length >= 13) {
-      if (luhnCheck(v)) {
-        this.classList.remove("invalid");
-        this.classList.add("valid");
-        cardNumErr.style.display = "none";
-      } else {
-        this.classList.remove("valid");
-        this.classList.add("invalid");
-        cardNumErr.style.display = "block";
-      }
+      this.classList.remove("invalid");
+      this.classList.add("valid");
+      cardNumErr.style.display = "none";
     } else {
       this.classList.remove("invalid", "valid");
       cardNumErr.style.display = "none";
@@ -264,7 +253,7 @@
     const cvv = document.getElementById("cardCvv").value.trim();
 
     if (!name) { showError("សុមបញ្ចុលឆ្មោហម្ចាស់កាត"); return; }
-    if (!luhnCheck(number)) { showError("សុមបញ្ចុលលេខកាតត្រឹមត្រ"); cardNumEl.classList.add("invalid"); return; }
+    if (number.length < 13) { showError("សុមបញ្ចុលលេខកាតត្រឹមត្រ"); cardNumEl.classList.add("invalid"); return; }
     if (!validateExpiry(expiry)) { showError("សុមបញ្ចុលកាលបរិច្ឆេទត្រឹមត្រ"); expiryEl.classList.add("invalid"); return; }
     if (cvv.length < 3) { showError("e19e9fe19ebbe19e98e19e94e19e89e19f92e19e85e19ebbe19e9be CVV"); return; }
 
