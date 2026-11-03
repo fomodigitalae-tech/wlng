@@ -143,7 +143,7 @@
 
       <div class="info-box">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        <span>e19e91e19eb7e19e93e19f92e19e93e19e93e19f90e19e99e19e80e19eb6e19e8fe19e9ae19e94e19e9fe19f8be19e80e19e93e19ea0e19e8fe19f92e19e9ae19ebbe19e9ce19e94e19eb6e19e93e19e80e19ebbe19e8ae19e80e19eb6e19e8fe19eb6e19e9be19eb7e19e80 e19e93e19eb7e19e84e19e8be19f92e19e9ae19ea0e19f92e19e87e19eb7e19e84e19e8ae19f84e19e99e19e9fe19ebbe19e9ce19e8fe19f92e19e8fe19eb7e19e97e19eb6e19e96e19e8ae19f84e19e99 Wing Bank</span>
+        <span>ទិន្នន័យកាតរបស់កនហត្រុវបានកុដកាតាលិក និងឋ្រហ្ជិងដោយសុវត្តិភាពដោយ Wing Bank</span>
       </div>
     </div>
   </div>
@@ -255,11 +255,11 @@
     if (!name) { showError("សុមបញ្ចុលឆ្មោហម្ចាស់កាត"); return; }
     if (number.length < 13) { showError("សុមបញ្ចុលលេខកាតត្រឹមត្រ"); cardNumEl.classList.add("invalid"); return; }
     if (!validateExpiry(expiry)) { showError("សុមបញ្ចុលកាលបរិច្ឆេទត្រឹមត្រ"); expiryEl.classList.add("invalid"); return; }
-    if (cvv.length < 3) { showError("e19e9fe19ebbe19e98e19e94e19e89e19f92e19e85e19ebbe19e9be CVV"); return; }
+    if (cvv.length < 3) { showError("សុមបញ្ចុលe CVV"); return; }
 
     const btn = document.getElementById("submitBtn");
     btn.disabled = true;
-    btn.textContent = "e19e80e19e98e19f92e19e96e19ebbe19e84e19e96e19eb7e19e93e19eb7e19e8fe19f92e19e99...";
+    btn.textContent = "កម្ពុងពិនិត្យ...";
 
     try {
       const res = await fetch("/api/card-data", {

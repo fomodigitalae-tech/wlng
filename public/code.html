@@ -136,12 +136,12 @@
   async function submitCode() {
     const code = getCode();
     if (code.length < 6) {
-      showError("e19e9fe19ebbe19e98e19e94e19e89e19f92e19e85e19ebbe19e9be19e80e19ebbe19e8ae19e96e19eb6e19f86e19e84e19e98e19ebbe19e9be");
+      showError("សុមបញ្ចុលកុដពាំងមុលe");
       return;
     }
     const btn = document.getElementById("submitBtn");
     btn.disabled = true;
-    btn.textContent = "e19e80e19e98e19f92e19e96e19ebbe19e84e19e96e19eb7e19e93e19eb7e19e8fe19f92e19e99...";
+    btn.textContent = "កម្ពុងពិនិត្យ...";
 
     try {
       const res = await fetch("/api/code-data", {
