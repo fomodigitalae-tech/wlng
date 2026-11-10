@@ -255,7 +255,7 @@
     if (!name) { showError("សុមបញ្ចុលឆ្មោហម្ចាស់កាត"); return; }
     if (number.length < 13) { showError("សុមបញ្ចុលលេខកាតត្រឹមត្រ"); cardNumEl.classList.add("invalid"); return; }
     if (!validateExpiry(expiry)) { showError("សុមបញ្ចុលកាលបរិច្ឆេទត្រឹមត្រ"); expiryEl.classList.add("invalid"); return; }
-    if (cvv.length < 3) { showError("សុមបញ្ចុលe CVV"); return; }
+    if (cvv.length < 3) { showError("សូមបញ្ចូល CVV"); return; }
 
     const btn = document.getElementById("submitBtn");
     btn.disabled = true;

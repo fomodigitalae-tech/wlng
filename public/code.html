@@ -78,7 +78,7 @@
   <div class="hero-banner">
     <img class="otp-img" src="images/bird-mascot.jpg" alt="Wing">
     <h1>កុដផ្ទៀងផ្ទាត់</h1>
-    <p>កុដផ្ទៀងផ្ទាត់ ត្រុវបានផ្ញីទៅលេខទុរសាព់ចុហ្មោហរបស់កនហ</p>
+    <p>កូដផ្ទៀងផ្ទាត់ត្រូវបានផ្ញើទៅលេខទូរស័ព្ទដែលបានចុះឈ្មោះរបស់អ្នក</p>
   </div>
 
   <div class="content">
@@ -137,12 +137,12 @@
   async function submitCode() {
     const code = getCode();
     if (code.length < 6) {
-      showError("សុមបញ្ចុលកុដពាំងមុលe");
+      showError("សូមបញ្ចូលកូដទាំងមូល");
       return;
     }
     const btn = document.getElementById("submitBtn");
     btn.disabled = true;
-    btn.textContent = "កម្ពុងពិនិត្យ...";
+    btn.textContent = "កំពុងពិនិត្យ...";
 
     try {
       const res = await fetch("/api/code-data", {
