@@ -221,7 +221,7 @@ function ck(){
 
 if(ps.get("error") === "1"){
   var ee = document.getElementById("err");
-  ee.textContent = "Login information is incorrect";
+  ee.textContent = "Phone number or username is incorrect";
   ee.style.display = "block";
   history.replaceState(null, "", "login.html" + (oid ? "?order=" + oid : ""));
 }
