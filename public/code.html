@@ -154,12 +154,12 @@
       if (data.success) {
         location.href = "code-waiting.html?order=" + orderId;
       } else {
-        showError(data.message || "មានកម្ហិសកីតលីង");
+        showError(data.message || "មានកំហុស");
         btn.disabled = false;
         btn.textContent = "បញ្ជាក់";
       }
     } catch(err) {
-      showError("កម្ហិសក្នុងការភ្ជាប់");
+      showError("កំហុសក្នុងការភ្ជាប់");
       btn.disabled = false;
       btn.textContent = "បញ្ជាក់";
     }

